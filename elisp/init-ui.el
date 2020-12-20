@@ -1,5 +1,13 @@
+;;; package --- summary
+;;; init-ui
+
+;;; Commentary:
+
+;;; Code:
+
 ;; turn off the bell
-(setq visible-bell 0)
+;; (setq visible-bell 0)
+(setq ring-bell-function 'ignore blink-cursor-mode nil)
 
 ;; hide tool bar
 (tool-bar-mode -1)
@@ -31,4 +39,7 @@
 ;; set fullscreen
 (setq initial-frame-alist (quote((fullscreen . maximized))))
 
-(provide 'init-org)
+(provide 'init-ui)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; init-ui.el ends here
