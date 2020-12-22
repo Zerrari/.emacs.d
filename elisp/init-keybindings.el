@@ -20,6 +20,8 @@
 
 (global-set-key (kbd "M-f") 'keyfreq-show)
 
+(global-set-key (kbd "M-p") 'zerrari-package-description)
+
 (provide 'init-keybindings)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

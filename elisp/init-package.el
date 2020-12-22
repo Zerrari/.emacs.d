@@ -37,17 +37,6 @@
   :config
   (perspeen-mode))
 
-;;swiper && counsel
-(use-package ivy
-  :init
-  (setq ivy-use-virtual-buffers t)
-  (setq enable-recursive-minibuffers t)
-  :bind
-  (("M-x" . counsel-M-x)
-   ("C-x C-f" . counsel-find-file)
-   ("C-s" . swiper-isearch)
-   ("C-x b" . ivy-switch-buffer)))
-
 ;; (use-package ivy-posframe
 ;;  :config
 ;;  (ivy-posframe-mode 1)
@@ -71,23 +60,13 @@
 ;; flycheck
 ;; (add-hook 'after-init-hook #'global-flycheck-mode)
 
-;; company
-(use-package company
-  :ensure t
-  :init
-  (add-hook 'after-init-hook 'global-company-mode)
-  :config
-  (setq company-minimum-prefix-length 1)
-  (setq company-idle-delay 0.2)
-  (setq company-tooltip-limit 5))
-
 
 ;; spaceline
 ;; (require 'spaceline-config)
 ;; (spaceline-spacemacs-theme)
 ;; (spaceline-emacs-theme)
 
-;; hungry delete
+;; hungry dele
 (use-package hungry-delete
   :config
   (global-hungry-delete-mode))
@@ -114,20 +93,25 @@
 ;; vterm
 (use-package vterm)
 
-;; aweosome-tap
-(load-file "~/.emacs.d/site-elisp/awesome-tab/awesome-tab.el")
-(require 'awesome-tab)
-(awesome-tab-mode t)
-(setq awesome-tab-label-fixed-length 10)
-(setq awesome-tab-height 100)
+;; aweosome-tab
+;;(load-file "~/.emacs.d/site-elisp/awesome-tab/awesome-tab.el")
+;;(require 'awesome-tab)
+;;(awesome-tab-mode t)
+;;(setq awesome-tab-label-fixed-length 10)
+;;(setq awesome-tab-height 100)
 
 ;; avy
+(use-package avy
+  :defer 2
+  :bind
+  (("M-z" . avy-goto-line)))
 
 
 ;; rainbow-delimiters
 (use-package rainbow-delimiters
   :config
   (rainbow-delimiters-mode))
+
 
 ;; snails
 ;; (add-to-list 'load-path "~/.emacs.d/elpa/")
@@ -176,15 +160,6 @@
   :config
   (dashboard-setup-startup-hook))
 
-
-;; aweosome-tray
-(use-package awesome-tray
-  :load-path "~/.emacs.d/site-elisp/awesome-tray"
-  :hook
-  (after-init . awesome-tray-mode))
-
-
-
 ;; flycheck
 (use-package flycheck
   :hook
@@ -197,12 +172,18 @@
   :config
   (keyfreq-autosave-mode 1))
 
+;; leetcode
 (use-package leetcode
   :config
   (setq leetcode-prefer-language "c")
   (setq leetcode-directory "~/notes/leetcode")
   :bind
   (("M-l" . leetcode)))
+
+;; multiple-cursors
+(use-package multiple-cursors
+  :bind
+  (("M-c" . mc/edit-lines)))
 
 (provide 'init-package)
 

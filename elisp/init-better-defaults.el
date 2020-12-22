@@ -41,10 +41,26 @@
     (goto-char (+ 3 (point)))
     (delete-backward-char 3)))
 
+(defun zerrari-package-description()
+  (interactive)
+  (progn
+    (let ((name (buffer-name)))
+    (insert ";;; package --- summary\n")
+    (newline)
+    (insert ";;; " name "\n")
+    (newline)
+    (insert ";;; Commentary:\n")
+    (newline)
+    (insert ";;; Code:\n")
+    (newline)
+    (newline)
+    (newline)
+    (insert ";;;;;;;;;;;;;;;;;;;;;;;;;\n")
+    (insert ";;; " name " ends here")
+    (goto-line 9))))
+
 ;; show matching
 (add-hook 'emacs-lisp-mode-hook 'show-paren-mode)
 
 (provide 'init-better-defaults)
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;; init-better-defaults ends here
