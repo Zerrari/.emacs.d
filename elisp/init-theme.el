@@ -5,10 +5,11 @@
 
 ;;; Code:
 
+(load-theme 'doom-gruvbox-light t)
 ;;(load-theme 'monokai t)
 ;;(load-theme 'doom-dark+ t)
 ;;(load-theme 'cyberpunk t)
-(load-theme 'dracula t)
+;; (load-theme 'dracula t)
 
 (provide 'init-theme)
 

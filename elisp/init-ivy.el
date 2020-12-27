@@ -13,7 +13,8 @@
   (("M-x" . counsel-M-x)
    ("C-x C-f" . counsel-find-file)
    ("C-s" . swiper-isearch)
-   ("C-x b" . ivy-switch-buffer)))
+   ("C-x b" . ivy-switch-buffer)
+   ("C-c s" . counsel-fzf)))
 
 (provide 'init-ivy)
 

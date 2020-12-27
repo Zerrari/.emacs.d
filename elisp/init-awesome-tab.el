@@ -9,7 +9,7 @@
   :load-path "~/.emacs.d/site-elisp/awesome-tab/"
   :config
   (awesome-tab-mode t)
-  (setq awesome-tab-label-fixed-length 10)
+  (setq awesome-tab-label-fixed-length 20)
   (setq awesome-tab-height 100)
   :bind
   (("M-s" . awesome-tab-backward-tab)

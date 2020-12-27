@@ -4,23 +4,18 @@
 ;;; Commentary:
 
 ;;; Code:
-(global-set-key (kbd "<f1>") 'open-init-file)
 
-;; (global-set-key (kbd "M-b") 'buffer-menu)
+;; Zerrari's keybindings
 
-;; (global-set-key (kbd "M-s") 'counsel-switch-buffer)
+;; define a keymap
 
-(global-set-key (kbd "M-d") 'zerrari-kill-comments)
+(define-prefix-command 'zerrari-keymap)
+(define-key zerrari-keymap (kbd "d") 'zerrari-kill-comments)
+(define-key zerrari-keymap (kbd "i") 'zerrari-org-insert-src-blocks)
+(define-key zerrari-keymap (kbd "p") 'zerrari-package-description)
 
-(global-set-key (kbd "M-i") 'zerrari-org-insert-src-blocks)
-
-(global-set-key (kbd "M-r") 'recentf-open-files)
-
-(global-set-key (kbd "M-h") 'evil-normal-state)
-
-(global-set-key (kbd "M-f") 'keyfreq-show)
-
-(global-set-key (kbd "M-p") 'zerrari-package-description)
+;; define a prefix key
+(global-set-key (kbd "M-z") zerrari-keymap)
 
 (provide 'init-keybindings)
 

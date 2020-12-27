@@ -7,6 +7,14 @@
 
 (setq make-backup-files nil)
 
+(setq visible-bell nil)
+
+(setq split-height-threshold nil)
+
+(setq split-width-threshold 0)
+
+(fset 'yes-or-no-p 'y-or-n-p)
+
 (global-hl-line-mode 1)
 
 (electric-indent-mode 1)
@@ -58,6 +66,10 @@
     (insert ";;;;;;;;;;;;;;;;;;;;;;;;;\n")
     (insert ";;; " name " ends here")
     (goto-line 9))))
+
+(defun zerrari-evil-goto-line-end()
+  (interactive)
+  (goto-char (end-of-line)))
 
 ;; show matching
 (add-hook 'emacs-lisp-mode-hook 'show-paren-mode)

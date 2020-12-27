@@ -24,6 +24,21 @@
   ;; To disable collection of benchmark data after init is done.
   (add-hook 'after-init-hook 'benchmark-init/deactivate))
 
+;; expand-region
+(use-package expand-region
+  :bind
+  (("C-=" . er/expand-region)))
+
+;; indent guide
+(use-package indent-guide
+  :config
+  (indent-guide-global-mode))
+
+;; smex
+;; (use-package smex
+;;  :bind
+;;  (("M-x" . smex)))
+
 ;; smart parens
 (use-package smartparens
   :config
@@ -43,22 +58,28 @@
 ;;  (setq ivy-posframe-display-functions-alist '((t . ivy-posframe-display))))
 
 ;; evil
-;;(use-package evil
-;;  :init (evil-mode 1))
+(use-package evil
+  :init (evil-mode 1)
+  :bind
+  (("M-h" . evil-normal-state)))
 
 ;; evil-leader
-;; (require 'evil-leader)
-;; (global-evil-leader-mode)
-;; (evil-leader/set-leader "<SPC>")
-;; (evil-leader/set-key
-;; "e" 'find-file)
+(require 'evil-leader)
+(global-evil-leader-mode)
+(evil-leader/set-leader "<SPC>")
+(evil-leader/set-key
+ "e" 'find-file)
 
 
 ;; eaf
 ;; (add-to-list 'load-path "~/.emacs.d/eaf/")
 ;; (require 'eaf)
+
 ;; flycheck
-;; (add-hook 'after-init-hook #'global-flycheck-mode)
+(use-package flycheck
+  :ensure t
+  :config
+  (add-hook 'after-init-hook #'global-flycheck-mode))
 
 
 ;; spaceline
@@ -110,8 +131,7 @@
 ;; rainbow-delimiters
 (use-package rainbow-delimiters
   :config
-  (rainbow-delimiters-mode))
-
+  (add-hook 'prog-mode-hook #'rainbow-delimiters-mode))
 
 ;; snails
 ;; (add-to-list 'load-path "~/.emacs.d/elpa/")
@@ -119,6 +139,7 @@
 
 ;; neotree
 (use-package neotree
+  :config
   :bind
   (([f8] . 'neotree-toggle)))
 
@@ -130,11 +151,15 @@
 (use-package all-the-icons
   :defer 0
   :ensure t)
+  
 
 ;; all-the-icons-dired
 (use-package all-the-icons-dired
   :defer 0
-  :ensure t)
+  :ensure t
+  :config
+  (add-hook 'dired-mode-hook 'all-the-icons-dired-mode))
+
 
 ;; figlet
 (use-package figlet
@@ -170,7 +195,9 @@
   :init
   (keyfreq-mode 1)
   :config
-  (keyfreq-autosave-mode 1))
+  (keyfreq-autosave-mode 1)
+  :bind
+  (("M-f" . keyfreq-show)))
 
 ;; leetcode
 (use-package leetcode
