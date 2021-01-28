@@ -9,6 +9,8 @@
 ;; (setq visible-bell 0)
 (setq ring-bell-function 'ignore blink-cursor-mode nil)
 
+(set-face-attribute 'default nil :font "monaco 20")
+
 ;; hide tool bar
 (tool-bar-mode -1)
 
@@ -29,12 +31,6 @@
 
 ;; skip welcome page
 (setq inhibit-splash-screen 1)
-
-;; change the font size
-(set-face-attribute 'default nil :height 100)
-
-;; set font
-;; (set-face-attribute 'default nil :family Monospace)
 
 ;; set fullscreen
 (setq initial-frame-alist (quote((fullscreen . maximized))))

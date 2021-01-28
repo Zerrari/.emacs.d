@@ -17,6 +17,10 @@
   (add-to-list 'load-path "~/.emacs.d/elpa/use-package-20201110.2133/use-package.el")
   (require 'use-package))
 
+(when (memq window-system '(mac ns x))
+  (exec-path-from-shell-initialize))
+
+
 ;; benchmark-init
 (use-package benchmark-init
   :ensure t
@@ -33,6 +37,8 @@
 (use-package indent-guide
   :config
   (indent-guide-global-mode))
+
+
 
 ;; smex
 ;; (use-package smex
@@ -56,6 +62,7 @@
 ;;  :config
 ;;  (ivy-posframe-mode 1)
 ;;  (setq ivy-posframe-display-functions-alist '((t . ivy-posframe-display))))
+
 
 ;; evil
 (use-package evil
@@ -111,8 +118,6 @@
   :config
   (which-key-mode))
 
-;; vterm
-(use-package vterm)
 
 ;; aweosome-tab
 ;;(load-file "~/.emacs.d/site-elisp/awesome-tab/awesome-tab.el")
