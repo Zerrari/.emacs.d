@@ -6,18 +6,19 @@
 
 ;;; Code:
 
-(use-package hexo
-  :init
-   (setq hexo-posix-compatible-shell-file-path "/usr/local/bin/fish"))
-
-(define-prefix-command 'hexo-mode-map)
-(global-set-key (kbd "M-b") hexo-mode-map)
-
 (defun hexo-my-blog ()
     (interactive)
     (hexo "~/Documents/blog/"))
 
-(define-key hexo-mode-map (kbd "s") 'hexo-my-blog)
+(define-prefix-command 'hexo-mode-map)
+
+(define-key hexo-mode-map (kbd "b") 'hexo-my-blog)
+
+(global-set-key (kbd "M-p") hexo-mode-map)
+
+(use-package hexo
+  :init
+   (setq hexo-posix-compatible-shell-file-path "/usr/local/bin/fish"))
 
 (provide 'init-hexo)
 

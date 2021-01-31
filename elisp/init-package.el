@@ -38,7 +38,10 @@
   :config
   (indent-guide-global-mode))
 
-
+;; iedit
+(use-package iedit
+  :diminish
+  :defer t)
 
 ;; smex
 ;; (use-package smex
@@ -47,36 +50,16 @@
 
 ;; smart parens
 (use-package smartparens
+  :diminish
   :config
   (smartparens-global-mode))
 
-;; perspeen
-(use-package perspeen
-  :ensure t
-  :init
-  (setq perspeen-use-tab nil)
+
+(use-package ivy-posframe
+  :diminish
   :config
-  (perspeen-mode))
-
-;; (use-package ivy-posframe
-;;  :config
-;;  (ivy-posframe-mode 1)
-;;  (setq ivy-posframe-display-functions-alist '((t . ivy-posframe-display))))
-
-
-;; evil
-(use-package evil
-  :init (evil-mode 1)
-  :bind
-  (("M-h" . evil-normal-state)))
-
-;; evil-leader
-(require 'evil-leader)
-(global-evil-leader-mode)
-(evil-leader/set-leader "<SPC>")
-(evil-leader/set-key
- "e" 'find-file)
-
+  (ivy-posframe-mode 1)
+  (setq ivy-posframe-display-functions-alist '((t . ivy-posframe-display))))
 
 ;; eaf
 ;; (add-to-list 'load-path "~/.emacs.d/eaf/")
@@ -84,37 +67,23 @@
 
 ;; flycheck
 (use-package flycheck
+  :diminish
   :ensure t
   :config
   (add-hook 'after-init-hook #'global-flycheck-mode))
 
 
-;; spaceline
-;; (require 'spaceline-config)
-;; (spaceline-spacemacs-theme)
-;; (spaceline-emacs-theme)
 
-;; hungry dele
+;; hungry delete
 (use-package hungry-delete
+  :diminish
   :config
   (global-hungry-delete-mode))
 
 
-;; airline
-;;(require 'airline-themes)
-;;(load-theme 'airline-light t)
-
-;; doom modeline
-(use-package doom-modeline
-  :disabled
-  :init
-  (setq doom-modeline-bar-width 1)
-  (setq doom-modeline-height 2)
-  :config
-  (doom-modeline-mode 1))
-
 ;; which-key
 (use-package which-key
+  :diminish
   :config
   (which-key-mode))
 
@@ -128,6 +97,7 @@
 
 ;; avy
 (use-package avy
+  :diminish
   :defer 2
   :bind
   (("M-z" . avy-goto-line)))
@@ -135,6 +105,7 @@
 
 ;; rainbow-delimiters
 (use-package rainbow-delimiters
+  :diminish
   :config
   (add-hook 'prog-mode-hook #'rainbow-delimiters-mode))
 
@@ -144,6 +115,7 @@
 
 ;; neotree
 (use-package neotree
+  :diminish
   :config
   :bind
   (([f8] . 'neotree-toggle)))
@@ -154,12 +126,14 @@
 
 ;; all-the-icons
 (use-package all-the-icons
+  :disabled
   :defer 0
   :ensure t)
   
 
 ;; all-the-icons-dired
 (use-package all-the-icons-dired
+  :disabled
   :defer 0
   :ensure t
   :config
@@ -168,6 +142,7 @@
 
 ;; figlet
 (use-package figlet
+  :diminish
   :defer 0
   :ensure t
   :config
@@ -175,6 +150,7 @@
 
 ;; popup-kill-ring
 (use-package popup-kill-ring
+  :disabled
   :bind
   (("M-y" . popup-kill-ring)))
 
@@ -186,17 +162,28 @@
 
 ;;; dashboard
 (use-package dashboard
+  :diminish
   :ensure t
   :config
   (dashboard-setup-startup-hook))
 
+;; selectrum
+(use-package selectrum
+  :diminish
+  :config
+  (selectrum-mode +1))
+
+
+
 ;; flycheck
 (use-package flycheck
+  :diminish
   :hook
   (add-hook 'after-init-hook #'global-flycheck-mode))
 
 ;; keyfreq
 (use-package keyfreq
+  :diminish
   :init
   (keyfreq-mode 1)
   :config
@@ -214,6 +201,8 @@
 
 ;; multiple-cursors
 (use-package multiple-cursors
+  :disabled
+  :diminish
   :bind
   (("M-c" . mc/edit-lines)))
 

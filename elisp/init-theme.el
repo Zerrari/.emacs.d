@@ -5,7 +5,7 @@
 
 ;;; Code:
 
-(load-theme 'doom-gruvbox-light t)
+(load-theme 'zenburn t)
 ;;(load-theme 'monokai t)
 ;;(load-theme 'doom-dark+ t)
 ;;(load-theme 'cyberpunk t)

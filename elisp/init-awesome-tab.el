@@ -6,7 +6,8 @@
 ;;; Code:
 
 (use-package awesome-tab
-  :load-path "~/.emacs.d/site-elisp/awesome-tab/"
+  :disabled
+  :load-path "/Users/zerrari/.emacs.d/site-elisp/awesome-tab/"
   :config
   (awesome-tab-mode t)
   (setq awesome-tab-label-fixed-length 20)
