@@ -21,7 +21,6 @@
   :config
   (company-posframe-mode 1))
 
-
 (provide 'init-company)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

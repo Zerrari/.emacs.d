@@ -7,7 +7,9 @@
 ;;; Code:
 
 (use-package ace-window)
+Welcome to the Emacs shell
 
+~/.emacs.d/elisp $ 
 (provide 'init-ace-window)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;

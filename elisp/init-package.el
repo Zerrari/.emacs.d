@@ -28,6 +28,10 @@
   ;; To disable collection of benchmark data after init is done.
   (add-hook 'after-init-hook 'benchmark-init/deactivate))
 
+(use-package anaconda-mode
+  :config
+  (add-hook 'python-mode-hook 'anaconda-mode))
+
 ;; expand-region
 (use-package expand-region
   :bind
@@ -43,6 +47,11 @@
   :diminish
   :defer t)
 
+(use-package all-the-icons)
+
+(use-package all-the-icons-dired
+  :config
+  (add-hook 'dired-mode-hook 'all-the-icons-dired-mode))
 ;; smex
 ;; (use-package smex
 ;;  :bind
@@ -157,7 +166,7 @@
 ;; page-break-lines
 (use-package page-break-lines
   :diminish
-  :init
+  :config
   (global-page-break-lines-mode))
 
 ;;; dashboard
