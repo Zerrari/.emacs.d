@@ -9,6 +9,11 @@
 
 ;; define a keymap
 
+(evil-global-set-key 'normal "j" 'evil-backward-char)
+(evil-global-set-key 'normal "k" 'evil-next-line)
+(evil-global-set-key 'normal "l" 'evil-previous-line)
+(evil-global-set-key 'normal ";" 'evil-forward-char)
+
 (define-prefix-command 'zerrari-keymap)
 (define-key zerrari-keymap (kbd "d") 'zerrari-kill-comments)
 (define-key zerrari-keymap (kbd "i") 'zerrari-org-insert-src-blocks)
