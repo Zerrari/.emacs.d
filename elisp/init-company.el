@@ -17,10 +17,6 @@
   (setq company-tooltip-align-annotations t)
   (setq company-tooltip-margin 1))   
 
-(use-package company-posframe
-  :config
-  (company-posframe-mode 1))
-
 (provide 'init-company)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

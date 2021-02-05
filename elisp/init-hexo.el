@@ -10,11 +10,12 @@
     (interactive)
     (hexo "~/Documents/blog/"))
 
+
 (define-prefix-command 'hexo-mode-map)
 
-(define-key hexo-mode-map (kbd "b") 'hexo-my-blog)
-
 (global-set-key (kbd "M-p") hexo-mode-map)
+
+(define-key hexo-mode-map (kbd "b") 'hexo-my-blog)
 
 (use-package hexo
   :init

@@ -35,6 +35,8 @@
 ;; set fullscreen
 (setq initial-frame-alist (quote((fullscreen . maximized))))
 
+(mood-line-mode)
+
 (provide 'init-ui)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

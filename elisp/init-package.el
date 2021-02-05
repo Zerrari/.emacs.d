@@ -29,6 +29,7 @@
   (add-hook 'after-init-hook 'benchmark-init/deactivate))
 
 (use-package anaconda-mode
+  :defer 5
   :config
   (add-hook 'python-mode-hook 'anaconda-mode))
 
@@ -45,7 +46,7 @@
 ;; iedit
 (use-package iedit
   :diminish
-  :defer t)
+  :defer 4)
 
 (use-package all-the-icons)
 
@@ -64,11 +65,6 @@
   (smartparens-global-mode))
 
 
-(use-package ivy-posframe
-  :diminish
-  :config
-  (ivy-posframe-mode 1)
-  (setq ivy-posframe-display-functions-alist '((t . ivy-posframe-display))))
 
 ;; eaf
 ;; (add-to-list 'load-path "~/.emacs.d/eaf/")
@@ -92,6 +88,7 @@
 
 ;; which-key
 (use-package which-key
+  :defer 2
   :diminish
   :config
   (which-key-mode))

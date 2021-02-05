@@ -1,0 +1,14 @@
+;;; package --- summary
+
+;;; init-pdf.el
+
+;;; Commentary:
+
+;;; Code:
+
+(use-package pdf-tools)
+
+(provide 'init-pdf)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; init-pdf.el ends here

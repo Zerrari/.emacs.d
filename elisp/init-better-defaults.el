@@ -5,6 +5,10 @@
 
 ;;; Code:
 
+(setq tab-width 4)
+
+(setq indent-tabs-mode nil)
+
 (setq make-backup-files nil)
 
 (setq visible-bell nil)
@@ -18,6 +22,8 @@
 (global-hl-line-mode 1)
 
 (electric-indent-mode 1)
+
+(setq make-backup-files nil)
 
 ;; recentf
 (require 'recentf)
