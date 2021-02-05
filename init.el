@@ -24,8 +24,6 @@
 (require 'init-theme)
 (require 'init-company)
 (require 'init-ivy)
-(require 'init-yasnippet)
-(require 'init-youdao)
 (require 'init-markdown)
 (require 'init-hexo)
 (require 'init-evil)
