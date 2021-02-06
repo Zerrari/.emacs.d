@@ -15,7 +15,7 @@
   (setq company-tooltip-limit 5)
   (setq company-show-numbers t)
   (setq company-tooltip-align-annotations t)
-  (setq company-tooltip-margin 1))   
+  (setq company-tooltip-margin 1))
 
 (provide 'init-company)
 

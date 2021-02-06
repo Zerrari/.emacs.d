@@ -1,0 +1,2 @@
+;;; Generated package description from /Users/zerrari/.emacs.d/elpa/hexo-20200416.1410/hexo.el  -*- no-byte-compile: t -*-
+(define-package "hexo" "20200416.1410" "Major mode & tools for Hexo" '((emacs "24.3")) :commit "d600b6c2d51959f1331c8abf3953365544322afa" :authors '(("Ono Hiroko (kuanyui)" . "azazabc123@gmail.com")) :maintainer '("Ono Hiroko (kuanyui)" . "azazabc123@gmail.com") :keywords '("tools" "hexo") :url "https://github.com/kuanyui/hexo.el")

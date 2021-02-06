@@ -69,12 +69,8 @@
 
 ;; flycheck
 (use-package flycheck
-  :diminish
   :ensure t
-  :config
-  (add-hook 'after-init-hook #'global-flycheck-mode))
-
-
+  :init (global-flycheck-mode))
 
 ;; hungry delete
 (use-package hungry-delete
@@ -160,11 +156,6 @@
 
 
 
-;; flycheck
-(use-package flycheck
-  :diminish
-  :hook
-  (add-hook 'after-init-hook #'global-flycheck-mode))
 
 ;; keyfreq
 (use-package keyfreq
