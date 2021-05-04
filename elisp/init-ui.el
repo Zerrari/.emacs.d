@@ -7,9 +7,10 @@
 
 ;; turn off the bell
 ;; (setq visible-bell 0)
+
 (setq ring-bell-function 'ignore blink-cursor-mode nil)
 
-(set-face-attribute 'default nil :font "monaco 20")
+(set-face-attribute 'default nil :font "monaco 24")
 
 ;; hide tool bar
 (tool-bar-mode -1)
@@ -34,8 +35,6 @@
 
 ;; set fullscreen
 (setq initial-frame-alist (quote((fullscreen . maximized))))
-
-(mood-line-mode)
 
 (provide 'init-ui)
 

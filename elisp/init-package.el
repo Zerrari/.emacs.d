@@ -20,43 +20,21 @@
 (when (memq window-system '(mac ns x))
   (exec-path-from-shell-initialize))
 
-
-;; benchmark-init
-(use-package benchmark-init
-  :ensure t
-  :config
-  ;; To disable collection of benchmark data after init is done.
-  (add-hook 'after-init-hook 'benchmark-init/deactivate))
-
-(use-package anaconda-mode
-  :defer 5
-  :config
-  (add-hook 'python-mode-hook 'anaconda-mode))
-
-;; expand-region
-(use-package expand-region
-  :bind
-  (("C-=" . er/expand-region)))
-
-;; indent guide
 (use-package indent-guide
+  :diminish
   :config
   (indent-guide-global-mode))
 
-;; iedit
-(use-package iedit
-  :diminish
-  :defer 4)
+(use-package iedit)
+    :diminish
 
 (use-package all-the-icons)
+  :diminish
 
 (use-package all-the-icons-dired
+  :diminish
   :config
   (add-hook 'dired-mode-hook 'all-the-icons-dired-mode))
-;; smex
-;; (use-package smex
-;;  :bind
-;;  (("M-x" . smex)))
 
 ;; smart parens
 (use-package smartparens
@@ -64,20 +42,20 @@
   :config
   (smartparens-global-mode))
 
-
-
-
 ;; flycheck
 (use-package flycheck
+  :diminish
   :ensure t
   :init (global-flycheck-mode))
+
+(use-package quickrun
+ :diminish)
 
 ;; hungry delete
 (use-package hungry-delete
   :diminish
   :config
   (global-hungry-delete-mode))
-
 
 ;; which-key
 (use-package which-key
@@ -86,13 +64,60 @@
   :config
   (which-key-mode))
 
-;; avy
-(use-package avy
-  :diminish
-  :defer 2
+;; ivy
+(use-package ivy
+  :init
+  (setq ivy-use-virtual-buffers t)
+  (setq enable-recursive-minibuffers t)
   :bind
-  (("M-z" . avy-goto-line)))
+   (("C-s" . swiper-isearch)
+   ("C-x b" . ivy-switch-buffer)
+   ("C-c s" . counsel-fzf)))
 
+;; evil
+(use-package evil
+  :diminish
+  :init (evil-mode 1)
+  :bind
+  (("M-h" . evil-normal-state)))
+
+(use-package evil-nerd-commenter
+  :defer t
+  :diminish)
+
+(evil-define-motion fast-forward ()
+  :type inclusive
+  (forward-line 10))
+
+(evil-define-motion fast-backward ()
+  :type inclusive
+  (previous-line 10))
+
+(evil-define-motion goto-line-beginning ()
+  :type inclusive
+  (beginning-of-line))
+
+(evil-define-motion goto-line-end ()
+  :type inclusive
+  (end-of-line))
+
+;; evil-leader
+(require 'evil-leader)
+
+(global-evil-leader-mode)
+
+(evil-leader/set-leader "<SPC>")
+
+(evil-leader/set-key
+  "w" 'save-buffer
+  "e" 'eval-buffer
+  "m" 'iedit-mode
+  "c" 'evilnc-comment-or-uncomment-lines
+  "d" 'delete-window
+  "r" 'quickrun
+  "s" 'swiper-isearch
+  "b" 'ivy-switch-buffer
+  "q" 'save-buffers-kill-emacs)
 
 ;; rainbow-delimiters
 (use-package rainbow-delimiters
@@ -100,79 +125,23 @@
   :config
   (add-hook 'prog-mode-hook #'rainbow-delimiters-mode))
 
-;; neotree
-(use-package neotree
-  :diminish
-  :config
-  :bind
-  (([f8] . 'neotree-toggle)))
-
 ;; diminish
 (use-package diminish
   :defer t)
 
-;; all-the-icons
-(use-package all-the-icons
-  :disabled
-  :defer 0
-  :ensure t)
-  
-
-;; all-the-icons-dired
-(use-package all-the-icons-dired
-  :disabled
-  :defer 0
-  :ensure t
-  :config
-  (add-hook 'dired-mode-hook 'all-the-icons-dired-mode))
-
-
-;; figlet
-(use-package figlet
-  :diminish
-  :defer 0
-  :ensure t
-  :config
-  (setq figlet-default-font "banner"))
-
-;; page-break-lines
-(use-package page-break-lines
-  :diminish
-  :config
-  (global-page-break-lines-mode))
-
-;;; dashboard
-(use-package dashboard
+;; company
+(use-package company
   :diminish
   :ensure t
-  :config
-  (dashboard-setup-startup-hook))
-
-;; selectrum
-(use-package selectrum
-  :diminish
-  :config
-  (selectrum-mode +1))
-
-
-
-
-;; keyfreq
-(use-package keyfreq
-  :diminish
   :init
-  (keyfreq-mode 1)
+  (add-hook 'after-init-hook 'global-company-mode)
   :config
-  (keyfreq-autosave-mode 1)
-  :bind
-  (("M-f" . keyfreq-show)))
-
-;; multiple-cursors
-(use-package multiple-cursors
-  :disabled
-  :diminish
-  :bind
-  (("M-c" . mc/edit-lines)))
+  (setq company-minimum-prefix-length 1)
+  (setq company-idle-delay 0.1)
+  (setq company-tooltip-limit 5)
+  (setq company-show-numbers t)
+  (setq company-tooltip-align-annotations t)
+  (setq company-tooltip-margin 1))
 
 (provide 'init-package)
 
