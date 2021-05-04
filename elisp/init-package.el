@@ -110,7 +110,7 @@
 
 (evil-leader/set-key
   "w" 'save-buffer
-  "e" 'eval-buffer
+  "f" 'counsel-find-file
   "m" 'iedit-mode
   "c" 'evilnc-comment-or-uncomment-lines
   "d" 'delete-window

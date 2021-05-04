@@ -25,6 +25,8 @@
 
 (setq make-backup-files nil)
 
+(setq default-directory "~/")
+
 ;; recentf
 (require 'recentf)
 (recentf-mode 1)
