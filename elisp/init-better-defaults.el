@@ -7,7 +7,9 @@
 
 (setq tab-width 4)
 
-(setq indent-tabs-mode nil)
+(setq-default indent-tabs-mode t)
+
+(setq-default c-default-style "linux")
 
 (setq make-backup-files nil)
 

@@ -42,6 +42,12 @@
   :config
   (smartparens-global-mode))
 
+
+;; ranger
+(use-package ranger
+  :diminish
+  )
+
 ;; flycheck
 (use-package flycheck
   :diminish
@@ -51,11 +57,20 @@
 (use-package quickrun
  :diminish)
 
-;; hungry delete
-(use-package hungry-delete
+(use-package markdown-mode
+  :diminish
+  )
+
+(use-package wakatime-mode
   :diminish
   :config
-  (global-hungry-delete-mode))
+  (setq wakatime-api-key "128b0b23-a6c0-4e02-9615-6c26286fc70f")
+  (global-wakatime-mode))
+
+(use-package smex
+  :diminish
+  :config
+  (global-set-key (kbd "M-x") 'smex))
 
 ;; which-key
 (use-package which-key
@@ -110,14 +125,22 @@
 
 (evil-leader/set-key
   "w" 'save-buffer
-  "f" 'counsel-find-file
+  "f" 'ranger
   "m" 'iedit-mode
   "c" 'evilnc-comment-or-uncomment-lines
   "d" 'delete-window
+  "k" 'kill-current-buffer
   "r" 'quickrun
-  "s" 'swiper-isearch
   "b" 'ivy-switch-buffer
   "q" 'save-buffers-kill-emacs)
+
+
+;; key-chord
+(use-package key-chord
+  :diminish
+  :config
+  (setq key-chord-two-keys-delay 0.5)
+  (key-chord-mode 1))
 
 ;; rainbow-delimiters
 (use-package rainbow-delimiters
@@ -128,6 +151,15 @@
 ;; diminish
 (use-package diminish
   :defer t)
+
+(use-package leetcode
+  :diminish
+  :config
+  (setq leetcode-prefer-language "c")
+  (setq leetcode-save-solutions t)
+  (setq leetcode-directory "~/Codes/leetcode")
+  )
+
 
 ;; company
 (use-package company
