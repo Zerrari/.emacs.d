@@ -25,6 +25,8 @@
 
 (electric-indent-mode 1)
 
+(global-eldoc-mode 0)
+
 (setq make-backup-files nil)
 
 (setq default-directory "~/")

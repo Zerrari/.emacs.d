@@ -33,7 +33,7 @@
  ;; If there is more than one, they won't work right.
  '(c-basic-offset 4)
  '(package-selected-packages
-   '(wakatime-mode markdown-mode key-chord leetcode ranger quickrun evil-nerd-commenter evil-leader which-key use-package smex smartparens rainbow-delimiters pythonic project page-break-lines multiple-cursors jsonrpc indent-guide iedit flymake flycheck exec-path-from-shell evil diminish counsel company all-the-icons-dired)))
+   '(leetcode wakatime-mode markdown-mode key-chord ranger quickrun evil-nerd-commenter evil-leader which-key use-package smex smartparens rainbow-delimiters pythonic project page-break-lines multiple-cursors jsonrpc indent-guide iedit flymake flycheck exec-path-from-shell evil diminish counsel company all-the-icons-dired)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

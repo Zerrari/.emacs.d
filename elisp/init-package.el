@@ -1,5 +1,4 @@
 ;;; init-package.el ---  -*- lexical-binding: t -*-
-
 ;;; Commentary:
 
 ;;; Code:
@@ -41,7 +40,6 @@
   :diminish
   :config
   (smartparens-global-mode))
-
 
 ;; ranger
 (use-package ranger
@@ -117,24 +115,27 @@
   (end-of-line))
 
 ;; evil-leader
-(require 'evil-leader)
 
-(global-evil-leader-mode)
-
-(evil-leader/set-leader "<SPC>")
-
-(evil-leader/set-key
-  "w" 'save-buffer
-  "f" 'ranger
-  "m" 'iedit-mode
-  "c" 'evilnc-comment-or-uncomment-lines
-  "d" 'delete-window
-  "k" 'kill-current-buffer
-  "r" 'quickrun
-  "b" 'ivy-switch-buffer
-  "q" 'save-buffers-kill-emacs)
-
-
+(use-package evil-leader
+  :diminish
+  :config
+  (global-evil-leader-mode)
+  (evil-leader/set-leader "<SPC>")
+  (evil-leader/set-key
+    "e" 'eval-buffer
+    "o" 'other-window
+    "w" 'save-buffer
+    "f" 'ranger
+    "m" 'iedit-mode
+    "c" 'evilnc-comment-or-uncomment-lines
+    "d" 'delete-window
+    "k" 'kill-current-buffer
+    "r" 'quickrun
+    "b" 'ivy-switch-buffer
+    "q" 'save-buffers-kill-emacs
+    "lt" 'leetcode-try
+    "ls" 'leetcode-submit))
+  
 ;; key-chord
 (use-package key-chord
   :diminish
@@ -157,9 +158,8 @@
   :config
   (setq leetcode-prefer-language "c")
   (setq leetcode-save-solutions t)
-  (setq leetcode-directory "~/Codes/leetcode")
+  (setq leetcode-directory "~/Codes/leetcode/algorithms")
   )
-
 
 ;; company
 (use-package company
