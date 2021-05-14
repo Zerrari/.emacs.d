@@ -43,5 +43,7 @@
 ;; show matching
 (add-hook 'emacs-lisp-mode-hook 'show-paren-mode)
 
+(add-hook 'leetcode--loading-mode-hook 'evil-emacs-state)
+
 (provide 'init-better-defaults)
 
