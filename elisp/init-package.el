@@ -24,8 +24,19 @@
   :config
   (indent-guide-global-mode))
 
-(use-package iedit)
-    :diminish
+(use-package iedit
+    :diminish)
+
+
+(use-package autoinsert
+  :diminish
+  :config
+  (auto-insert-mode 1)
+  (setq auto-insert-query nil)
+  (setq auto-insert-directory "~/.emacs.d/templates/")
+  (define-auto-insert "\.cpp" "cpp-template.cpp")
+  (define-auto-insert "\.c" "c-template.c"))
+  
 
 (use-package all-the-icons)
   :diminish
