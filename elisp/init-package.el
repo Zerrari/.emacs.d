@@ -1,4 +1,5 @@
 ;;; init-package.el ---  -*- lexical-binding: t -*-
+
 ;;; Commentary:
 
 ;;; Code:
@@ -34,8 +35,7 @@
   (auto-insert-mode 1)
   (setq auto-insert-query nil)
   (setq auto-insert-directory "~/.emacs.d/templates/")
-  (define-auto-insert "\.cpp" "cpp-template.cpp")
-  (define-auto-insert "\.c" "c-template.c"))
+  (define-auto-insert "\.cpp" "cpp-template.cpp"))
   
 
 (use-package all-the-icons)
@@ -107,8 +107,7 @@
 (use-package evil
   :diminish
   :init (evil-mode 1)
-  :bind
-  (("M-h" . evil-normal-state)))
+  )
 
 (use-package evil-nerd-commenter
   :defer t
@@ -189,7 +188,16 @@
   (setq company-tooltip-limit 5)
   (setq company-show-numbers t)
   (setq company-tooltip-align-annotations t)
-  (setq company-tooltip-margin 1))
+  (setq company-tooltip-margin 1)
+  (add-hook 'emacs-lisp-mode-hook
+	    (lambda ()
+	    (set (make-local-variable 'company-backends) '(company-elisp company-dabbrev company-files))))
+  (add-hook 'c-mode-hook
+	    (lambda ()
+	    (set (make-local-variable 'company-backends) '(company-dabbrev company-files))))
+  (add-hook 'c++-mode-hook
+	    (lambda ()
+	    (set (make-local-variable 'company-backends) '(company-dabbrev company-files)))))
 
 (provide 'init-package)
 

@@ -40,6 +40,51 @@
   (interactive)
   (find-file "~/.emacs.d/init.el"))
 
+(defun newc()
+  "Insert a template for c source code"
+  (interactive)
+  (insert "#include <stdio.h>\n"
+	  "#include <stdlib.h>\n"
+	  "\n"
+	  "int main()\n"
+	  "{\n"
+	  "\n"
+	  "    return 0;\n"
+	  "}")
+  (forward-line -2)
+)
+
+(defun newcpp()
+  "Insert a template for c source code"
+  (interactive)
+  (insert "#include <iostream>\n"
+	  "\n"
+	  "using namespace std;\n"
+	  "\n"
+	  "int main()\n"
+	  "{\n"
+	  "\n"
+	  "    return 0;\n"
+	  "}")
+  (forward-line -2)
+)
+
+(add-hook 'c-mode-hook
+          (lambda ()
+            (if (= (buffer-size) 0)
+	    (progn 
+                (newc)
+            (message "load a c template!")))
+            ))
+
+(add-hook 'c++-mode-hook
+          (lambda ()
+            (if (= (buffer-size) 0)
+		(progn
+                (newcpp)
+            (message "load a cpp template!")))
+            ))
+ 
 ;; show matching
 (add-hook 'emacs-lisp-mode-hook 'show-paren-mode)
 
