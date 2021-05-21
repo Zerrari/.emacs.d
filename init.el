@@ -1,42 +1,34 @@
-;;; package --- summary
+;;; init1.el ---                                     -*- lexical-binding: t; -*-
 
-;;; init.el
+;; Copyright (C) 2021  zerrari
 
+;; Author: zerrari <zerrari@zhangyizhongdeMacBook-Pro.local>
+;; Keywords: 
 
-;;;  #######
-;;;       #  ###### #####  #####    ##   #####  #
-;;;      #   #      #    # #    #  #  #  #    # #
-;;;     #    #####  #    # #    # #    # #    # #
-;;;    #     #      #####  #####  ###### #####  #
-;;;   #      #      #   #  #   #  #    # #   #  #
-;;;  ####### ###### #    # #    # #    # #    # #
+;; This program is free software; you can redistribute it and/or modify
+;; it under the terms of the GNU General Public License as published by
+;; the Free Software Foundation, either version 3 of the License, or
+;; (at your option) any later version.
+
+;; This program is distributed in the hope that it will be useful,
+;; but WITHOUT ANY WARRANTY; without even the implied warranty of
+;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+;; GNU General Public License for more details.
+
+;; You should have received a copy of the GNU General Public License
+;; along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 ;;; Commentary:
 
+;; 
+
 ;;; Code:
 
-(add-to-list 'load-path "~/.emacs.d/elisp/")
+(add-to-list 'load-path "~/.emacs.default/elisp")
 
-(require 'init-package)
+(require 'init-packages)
 (require 'init-better-defaults)
 (require 'init-ui)
 (require 'init-keybindings)
-(require 'init-org)
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;; init.el ends here
-
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(c-basic-offset 4)
- '(package-selected-packages
-   '(youdao-dictionary leetcode wakatime-mode markdown-mode key-chord ranger quickrun evil-nerd-commenter evil-leader which-key use-package smex smartparens rainbow-delimiters pythonic project page-break-lines multiple-cursors jsonrpc indent-guide iedit flymake flycheck exec-path-from-shell evil diminish counsel company all-the-icons-dired)))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
+;;; init1.el ends here

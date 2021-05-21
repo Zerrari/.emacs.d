@@ -1,21 +1,85 @@
-;;; init-package.el ---  -*- lexical-binding: t -*-
+;;; init-packages.el                            -*- lexical-binding: t; -*-
+
+;; Copyright (C) 2021  zerrari
+
+;; Author: zerrari <zerrari@zhangyizhongdeMacBook-Pro.local>
+;; Keywords: 
+
+;; This program is free software; you can redistribute it and/or modify
+;; it under the terms of the GNU General Public License as published by
+;; the Free Software Foundation, either version 3 of the License, or
+;; (at your option) any later version.
+
+;; This program is distributed in the hope that it will be useful,
+;; but WITHOUT ANY WARRANTY; without even the implied warranty of
+;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+;; GNU General Public License for more details.
+
+;; You should have received a copy of the GNU General Public License
+;; along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 ;;; Commentary:
 
+;; 
+
 ;;; Code:
 
-;; package install
+(require 'cl)
+
 (setq package-archives '(("gnu"   . "http://elpa.emacs-china.org/gnu/")
                          ("melpa" . "http://elpa.emacs-china.org/melpa/")))
 
-(unless (bound-and-true-p package--initialized)
-  (setq package-enable-at-startup nil)
-  (package-initialize))
+(defvar zerrari/packages '(
+		;; --- Auto-completion ---
+		company
+		;; --- Better Editor ---
+		ivy
+		swiper
+		counsel
+		smartparens
+		smex
+		which-key
+		iedit
+		multiple-cursors
+		use-package
+		youdao-dictionary
+		;; --- Vim ---
+		evil
+		evil-leader
+		evil-nerd-commenter
+		key-chord
+		;; --- Major Mode ---
+		markdown-mode
+		;; --- Minor Mode ---
+		exec-path-from-shell
+		wakatime-mode
+		;; --- ui ---
+		all-the-icons
+		all-the-icons-dired
+		rainbow-delimiters
+		diminish
+		;; --- Themes ---
+		doom-themes
+		;; --- Files ---
+		ranger
+		;; --- programming ---
+		flycheck
+		quickrun
+		))
 
-(eval-when-compile
-  ;; Following line is not needed if use-package.el is in ~/.emacs.d
-  (add-to-list 'load-path "~/.emacs.d/elpa/use-package-20201110.2133/use-package.el")
-  (require 'use-package))
+(setq package-selected-packages zerrari/packages)
+
+ (defun my/packages-installed-p ()
+     (loop for pkg in zerrari/packages
+	   when (not (package-installed-p pkg)) do (return nil)
+	   finally (return t)))
+
+ (unless (my/packages-installed-p)
+     (message "%s" "Refreshing package database...")
+     (package-refresh-contents)
+     (dolist (pkg zerrari/packages)
+       (when (not (package-installed-p pkg))
+	 (package-install pkg))))
 
 (when (memq window-system '(mac ns x))
   (exec-path-from-shell-initialize))
@@ -45,6 +109,10 @@
   :diminish
   :config
   (add-hook 'dired-mode-hook 'all-the-icons-dired-mode))
+
+(use-package doom-themes
+  :config
+  (load-theme 'doom-one t))
 
 ;; smart parens
 (use-package smartparens
@@ -119,7 +187,7 @@
 
 (evil-define-motion fast-backward ()
   :type inclusive
-  (previous-line 10))
+  (forward-line -10))
 
 (evil-define-motion goto-line-beginning ()
   :type inclusive
@@ -168,14 +236,6 @@
 (use-package diminish
   :defer t)
 
-(use-package leetcode
-  :diminish
-  :config
-  (setq leetcode-prefer-language "c")
-  (setq leetcode-save-solutions t)
-  (setq leetcode-directory "~/Codes/leetcode/algorithms")
-  )
-
 ;; company
 (use-package company
   :diminish
@@ -199,9 +259,6 @@
 	    (lambda ()
 	    (set (make-local-variable 'company-backends) '(company-dabbrev company-files)))))
 
-(provide 'init-package)
+(provide 'init-packages)
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;; init-package.el ends here
-
-
+;;; init-packages.el ends here

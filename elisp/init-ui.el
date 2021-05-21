@@ -1,12 +1,28 @@
-;;; package --- summary
-;;; init-ui
+;;; init-ui1.el ---                                  -*- lexical-binding: t; -*-
+
+;; Copyright (C) 2021  zerrari
+
+;; Author: zerrari <zerrari@zhangyizhongdeMacBook-Pro.local>
+;; Keywords: 
+
+;; This program is free software; you can redistribute it and/or modify
+;; it under the terms of the GNU General Public License as published by
+;; the Free Software Foundation, either version 3 of the License, or
+;; (at your option) any later version.
+
+;; This program is distributed in the hope that it will be useful,
+;; but WITHOUT ANY WARRANTY; without even the implied warranty of
+;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+;; GNU General Public License for more details.
+
+;; You should have received a copy of the GNU General Public License
+;; along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 ;;; Commentary:
 
-;;; Code:
+;; 
 
-;; turn off the bell
-;; (setq visible-bell 0)
+;;; Code:
 
 (setq ring-bell-function 'ignore blink-cursor-mode nil)
 
@@ -38,5 +54,4 @@
 
 (provide 'init-ui)
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;; init-ui.el ends here
+;;; init-ui1.el ends here

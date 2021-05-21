@@ -1,7 +1,26 @@
-;;; package --- summary
-;;; init-better-defaults
+;;; init-better-defaults1.el ---                     -*- lexical-binding: t; -*-
+
+;; Copyright (C) 2021  zerrari
+
+;; Author: zerrari <zerrari@zhangyizhongdeMacBook-Pro.local>
+;; Keywords: 
+
+;; This program is free software; you can redistribute it and/or modify
+;; it under the terms of the GNU General Public License as published by
+;; the Free Software Foundation, either version 3 of the License, or
+;; (at your option) any later version.
+
+;; This program is distributed in the hope that it will be useful,
+;; but WITHOUT ANY WARRANTY; without even the implied warranty of
+;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+;; GNU General Public License for more details.
+
+;; You should have received a copy of the GNU General Public License
+;; along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 ;;; Commentary:
+
+;; 
 
 ;;; Code:
 
@@ -36,12 +55,8 @@
 (recentf-mode 1)
 
 ;; define functions
-(defun open-init-file()
-  (interactive)
-  (find-file "~/.emacs.d/init.el"))
-
 (defun newc()
-  "Insert a template for c source code"
+  "Insert a template for c source code."
   (interactive)
   (insert "#include <stdio.h>\n"
 	  "#include <stdlib.h>\n"
@@ -55,7 +70,7 @@
 )
 
 (defun newcpp()
-  "Insert a template for c source code"
+  "Insert a template for c source code."
   (interactive)
   (insert "#include <iostream>\n"
 	  "\n"
@@ -72,18 +87,17 @@
 (add-hook 'c-mode-hook
           (lambda ()
             (if (= (buffer-size) 0)
-	    (progn 
-                (newc)
-            (message "load a c template!")))
-            ))
+			(progn
+				(newc)
+				(message "load a c template!")))))
+            
 
 (add-hook 'c++-mode-hook
           (lambda ()
             (if (= (buffer-size) 0)
-		(progn
-                (newcpp)
-            (message "load a cpp template!")))
-            ))
+			(progn
+				(newcpp)
+				(message "load a cpp template!")))))
  
 ;; show matching
 (add-hook 'emacs-lisp-mode-hook 'show-paren-mode)
@@ -92,3 +106,4 @@
 
 (provide 'init-better-defaults)
 
+;;; init-better-defaults1.el ends here
