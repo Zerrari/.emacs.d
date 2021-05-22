@@ -50,6 +50,8 @@
 
 (setq default-directory "~/")
 
+(setq custom-file "~/.emacs.d/elisp/init-custom.el" )
+
 ;; https://www.reddit.com/r/emacs/comments/701pzr/flycheck_error_tally_in_custom_mode_line/
 
 (defun d/flycheck-lighter (state)
@@ -60,8 +62,8 @@ Source: https://git.io/vQKzv"
          (errorp (flycheck-has-current-errors-p state))
          (err (or (cdr (assq state counts)) "0"))
          (running (eq 'running flycheck-last-status-change)))
-    (cond ((not (eq err 0)) (format "E:•%s" err))
-	  (t (format "E:•0")))))
+    (cond ((not (eq err 0)) (format "E : • %s" err))
+	  (t (format "E : • 0")))))
 
 ;; format some information on the right side of mode line
 ;; https://stackoverflow.com/questions/16775855/how-to-fixate-value-on-the-right-side-of-the-modeline/22971471#22971471
@@ -101,7 +103,7 @@ Containing LEFT, and RIGHT aligned respectively."
      ;; Left.
      (quote ("[%*] "
 	     evil-mode-line-tag
-	     " %b "
+	     (:eval (propertize " %b " 'face '(:foreground "orange")))
              " l : %l  "
              ))
      ;; Right.
@@ -176,8 +178,6 @@ Containing LEFT, and RIGHT aligned respectively."
  
 ;; show matching
 (add-hook 'emacs-lisp-mode-hook 'show-paren-mode)
-
-(add-hook 'leetcode--loading-mode-hook 'evil-emacs-state)
 
 (provide 'init-better-defaults)
 

@@ -40,10 +40,7 @@
 		smartparens
 		smex
 		which-key
-		iedit
-		multiple-cursors
 		use-package
-		youdao-dictionary
 		;; --- Vim ---
 		evil
 		evil-leader
@@ -52,7 +49,6 @@
 		;; --- Major Mode ---
 		markdown-mode
 		markdown-toc
-		markdown-preview-mode
 		;; --- Minor Mode ---
 		exec-path-from-shell
 		wakatime-mode
@@ -68,7 +64,6 @@
 		;; --- Programming ---
 		flycheck
 		quickrun
-		projectile
 		))
 
 (setq package-selected-packages zerrari/packages)
@@ -97,14 +92,6 @@
   :diminish
   :config
   (global-hungry-delete-mode))
-
-(use-package iedit
-    :diminish)
-
-(use-package projectile
-  :diminish
-  :config
-  (projectile-mode +1))
 
 (use-package autoinsert
   :diminish
@@ -179,8 +166,7 @@
   (setq enable-recursive-minibuffers t)
   :bind
    (("C-s" . swiper-isearch)
-   ("C-x b" . ivy-switch-buffer)
-   ("C-c s" . counsel-fzf)))
+    ("C-c s" . counsel-fzf)))
 
 ;; evil
 (use-package evil
@@ -209,7 +195,6 @@
   (end-of-line))
 
 ;; evil-leader
-
 (use-package evil-leader
   :diminish
   :config
@@ -220,15 +205,13 @@
     "o" 'other-window
     "w" 'save-buffer
     "f" 'ranger
-    "m" 'iedit-mode
     "c" 'evilnc-comment-or-uncomment-lines
     "d" 'delete-window
     "k" 'kill-current-buffer
     "r" 'quickrun
     "b" 'ivy-switch-buffer
-    "q" 'save-buffers-kill-emacs
-    "lt" 'leetcode-try
-    "ls" 'leetcode-submit))
+    "s" 'split-window-right
+    "q" 'save-buffers-kill-emacs))
   
 ;; key-chord
 (use-package key-chord
