@@ -33,6 +33,7 @@
 		;; --- Auto-completion ---
 		company
 		;; --- Better Editor ---
+		hungry-delete
 		ivy
 		swiper
 		counsel
@@ -50,6 +51,8 @@
 		key-chord
 		;; --- Major Mode ---
 		markdown-mode
+		markdown-toc
+		markdown-preview-mode
 		;; --- Minor Mode ---
 		exec-path-from-shell
 		wakatime-mode
@@ -62,9 +65,10 @@
 		doom-themes
 		;; --- Files ---
 		ranger
-		;; --- programming ---
+		;; --- Programming ---
 		flycheck
 		quickrun
+		projectile
 		))
 
 (setq package-selected-packages zerrari/packages)
@@ -89,21 +93,28 @@
   :config
   (indent-guide-global-mode))
 
+(use-package hungry-delete
+  :diminish
+  :config
+  (global-hungry-delete-mode))
+
 (use-package iedit
     :diminish)
 
+(use-package projectile
+  :diminish
+  :config
+  (projectile-mode +1))
 
 (use-package autoinsert
   :diminish
   :config
   (auto-insert-mode 1)
-  (setq auto-insert-query nil)
-  (setq auto-insert-directory "~/.emacs.d/templates/")
-  (define-auto-insert "\.cpp" "cpp-template.cpp"))
+  (setq auto-insert-query nil))
   
 
-(use-package all-the-icons)
-  :diminish
+(use-package all-the-icons
+  :diminish)
 
 (use-package all-the-icons-dired
   :diminish
@@ -120,15 +131,15 @@
   :config
   (smartparens-global-mode)
   (sp-local-pair 'emacs-lisp-mode "'" nil :actions nil)
-  (sp-local-pair 'lisp-interaction-mode "'" nil :actions nil)
-  )
+  (sp-local-pair 'lisp-interaction-mode "'" nil :actions nil))
+  
 
 
 
 ;; ranger
 (use-package ranger
-  :diminish
-  )
+  :diminish)
+  
 
 ;; flycheck
 (use-package flycheck
@@ -140,8 +151,8 @@
  :diminish)
 
 (use-package markdown-mode
-  :diminish
-  )
+  :diminish)
+  
 
 (use-package wakatime-mode
   :diminish
@@ -174,8 +185,8 @@
 ;; evil
 (use-package evil
   :diminish
-  :init (evil-mode 1)
-  )
+  :init (evil-mode 1))
+  
 
 (use-package evil-nerd-commenter
   :defer t
