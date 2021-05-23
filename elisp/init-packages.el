@@ -29,6 +29,12 @@
 (setq package-archives '(("gnu"   . "http://elpa.emacs-china.org/gnu/")
                          ("melpa" . "http://elpa.emacs-china.org/melpa/")))
 
+(package-initialize)
+
+(unless (package-installed-p 'use-package) 
+  (package-refresh-contents)
+  (package-install 'use-package))
+
 (defvar zerrari/packages '(
 		;; --- Auto-completion ---
 		company
@@ -45,6 +51,7 @@
 		evil
 		evil-leader
 		evil-nerd-commenter
+		;evil-surround
 		key-chord
 		;; --- Major Mode ---
 		markdown-mode
@@ -64,6 +71,7 @@
 		;; --- Programming ---
 		flycheck
 		quickrun
+		;; projectile
 		))
 
 (setq package-selected-packages zerrari/packages)
@@ -112,6 +120,12 @@
   :config
   (load-theme 'doom-one t))
 
+;; (use-package projectile
+;;   :diminish
+;;   :config
+;;   (projectile-mode +1)
+;;   (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map))
+
 ;; smart parens
 (use-package smartparens
   :diminish
@@ -120,9 +134,6 @@
   (sp-local-pair 'emacs-lisp-mode "'" nil :actions nil)
   (sp-local-pair 'lisp-interaction-mode "'" nil :actions nil))
   
-
-
-
 ;; ranger
 (use-package ranger
   :diminish)
@@ -219,6 +230,11 @@
   :config
   (setq key-chord-two-keys-delay 0.5)
   (key-chord-mode 1))
+
+(use-package evil-surround
+  :diminish
+  :config
+  (global-evil-surround-mode 1))
 
 ;; rainbow-delimiters
 (use-package rainbow-delimiters

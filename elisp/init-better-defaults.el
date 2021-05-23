@@ -50,7 +50,7 @@
 
 (setq default-directory "~/")
 
-(setq custom-file "~/.emacs.d/elisp/init-custom.el" )
+(setq custom-file "~/.emacs.default/elisp/init-custom.el" )
 
 ;; https://www.reddit.com/r/emacs/comments/701pzr/flycheck_error_tally_in_custom_mode_line/
 
