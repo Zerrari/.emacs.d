@@ -1,4 +1,4 @@
-;;; init1.el ---                                     -*- lexical-binding: t; -*-
+;;; init.el ---                                     -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2021  zerrari
 
@@ -24,11 +24,20 @@
 
 ;;; Code:
 
-(add-to-list 'load-path "~/.emacs.default/elisp")
+(let ((default-directory  "~/.emacs.default/plugins"))
+  (normal-top-level-add-subdirs-to-load-path))
 
-(require 'init-packages)
-(require 'init-better-defaults)
+(add-to-list 'load-path "~/.emacs.default/plugins")
+(add-to-list 'load-path "~/.emacs.default/lisp")
+
 (require 'init-ui)
-(require 'init-keybindings)
+(require 'init-better-defaults)
+(require 'init-lazyload)
+(require 'init-evil)
+(require 'init-company)
+(require 'init-themes)
+(require 'init-smartparens)
+(require 'init-swiper)
+(require 'init-smex)
 
-;;; init1.el ends here
+;;; init.el ends here
