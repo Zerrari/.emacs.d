@@ -41,7 +41,7 @@
 		;counsel
 		;smartparens
 		;smex
-		;which-key
+		;; which-key
 		;use-package
 		;;; --- Vim ---
 		;evil

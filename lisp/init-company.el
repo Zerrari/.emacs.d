@@ -1,6 +1,6 @@
 (require 'company)
 
-(add-hook 'after-init-hook 'global-company-mode)
+(global-company-mode)
 
 (setq company-minimum-prefix-length 1)
 

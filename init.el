@@ -39,5 +39,10 @@
 (require 'init-smartparens)
 (require 'init-swiper)
 (require 'init-smex)
+(require 'init-whichkey)
+(require 'init-markdown)
+(require 'init-quickrun)
+(require 'init-wakatime)
+(require 'init-diminish)
 
 ;;; init.el ends here
