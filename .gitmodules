@@ -73,3 +73,6 @@
 [submodule "plugins/indent-guide"]
 	path = plugins/indent-guide
 	url = https://github.com/zk-phi/indent-guide
+[submodule "plugins/general"]
+	path = plugins/general
+	url = https://github.com/noctuid/general.el

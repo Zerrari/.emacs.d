@@ -31,7 +31,7 @@
 (add-to-list 'load-path "~/.emacs.default/lisp")
 
 (require 'init-ui)
-(require 'init-better-defaults)
+(require 'init-utils)
 (require 'init-lazyload)
 (require 'init-packages)
 (require 'init-evil)
@@ -44,8 +44,10 @@
 (require 'init-markdown)
 (require 'init-quickrun)
 ;; (require 'init-wakatime)
-(require 'flycheck)
+(require 'init-flycheck)
 (require 'init-icons)
 (require 'init-diminish)
+(require 'init-general)
+;; (require 'init-functions)
 
 ;;; init.el ends here

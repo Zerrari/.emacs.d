@@ -6,20 +6,20 @@
 (evil-mode 1)
 
 ;; evil-leader
-(global-evil-leader-mode)
-(evil-leader/set-leader "<SPC>")
-(evil-leader/set-key
-    "e" 'eval-buffer
-    "o" 'other-window
-    "w" 'save-buffer
-    "f" 'ranger
-    "c" 'evilnc-comment-or-uncomment-lines
-    "d" 'delete-window
-    "k" 'kill-current-buffer
-    "r" 'quickrun
-    "b" 'ivy-switch-buffer
-    "s" 'split-window-right
-    "q" 'save-buffers-kill-emacs)
+;; (global-evil-leader-mode)
+;; (evil-leader/set-leader "<SPC>")
+;; (evil-leader/set-key
+;;     "e" 'eval-buffer
+;;     "o" 'other-window
+;;     "w" 'save-buffer
+;;     "f" 'ranger
+;;     "c" 'evilnc-comment-or-uncomment-lines
+;;     "d" 'delete-window
+;;     "k" 'kill-current-buffer
+;;     "r" 'quickrun
+;;     "b" 'change-previous-buffer
+;;     "ss" 'split-window-right
+;;     "q" 'save-buffers-kill-emacs)
 
 (evil-define-motion fast-forward ()
   :type inclusive
