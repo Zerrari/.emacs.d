@@ -24,6 +24,16 @@
 
 ;;; Code:
 
+(require 'indent-guide)
+(require 'rainbow-delimiters)
+(require 'hungry-delete)
+
+(indent-guide-global-mode)
+
+(add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
+
+(global-hungry-delete-mode)
+
 (setq tab-width 4)
 
 (setq-default indent-tabs-mode t)

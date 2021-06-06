@@ -1,9 +1,13 @@
 (require 'diminish)
 
 (diminish 'which-key-mode)
-(diminish 'smartparens-global-mode)
+(diminish 'smartparens-mode)
 (diminish 'ivy-mode)
-(diminish 'global-company-mode)
-(diminish 'global-wakatime-mode)
+(diminish 'flycheck-mode)
+(diminish 'company-mode)
+(diminish 'indent-guide-mode)
+(diminish 'rainbow-delimiters-mode)
+(diminish 'hungry-delete-mode)
+;; (diminish 'global-wakatime-mode)
 
 (provide 'init-diminish)

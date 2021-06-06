@@ -33,6 +33,7 @@
 (require 'init-ui)
 (require 'init-better-defaults)
 (require 'init-lazyload)
+(require 'init-packages)
 (require 'init-evil)
 (require 'init-company)
 (require 'init-themes)
@@ -42,7 +43,9 @@
 (require 'init-whichkey)
 (require 'init-markdown)
 (require 'init-quickrun)
-(require 'init-wakatime)
+;; (require 'init-wakatime)
+(require 'flycheck)
+(require 'init-icons)
 (require 'init-diminish)
 
 ;;; init.el ends here
