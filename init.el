@@ -47,6 +47,7 @@
 (require 'init-flycheck)
 (require 'init-icons)
 (require 'init-diminish)
+(require 'init-ein)
 (require 'init-general)
 ;; (require 'init-functions)
 
