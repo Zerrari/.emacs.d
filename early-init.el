@@ -1,4 +1,4 @@
-;;; early-init1.el                     -*- lexical-binding: t; -*-
+;;; early-init.el                     -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2021  zerrari
 
@@ -28,6 +28,6 @@
 
 (setq site-run-file nil)
 
-(provide 'early-init1)
+(provide 'early-init)
 
-;;; early-init1.el ends here
+;;; early-init.el ends here
