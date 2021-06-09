@@ -76,3 +76,9 @@
 [submodule "plugins/general"]
 	path = plugins/general
 	url = https://github.com/noctuid/general.el
+[submodule "plugins/vterm"]
+	path = plugins/vterm
+	url = https://github.com/akermu/emacs-libvterm.git
+[submodule "plugins/shell-pop"]
+	path = plugins/shell-pop
+	url = https://github.com/kyagi/shell-pop-el

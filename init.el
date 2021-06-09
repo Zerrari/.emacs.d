@@ -24,11 +24,18 @@
 
 ;;; Code:
 
-(let ((default-directory  "~/.emacs.default/plugins"))
+
+(defvar zerrari-emacs-root-dir "~/.emacs.default")
+
+(defvar zerrari-emacs-config-dir (concat zerrari-emacs-root-dir "/lisp"))
+
+(defvar zerrari-emacs-plugin-dir (concat zerrari-emacs-root-dir "/plugins"))
+
+(let ((default-directory  zerrari-emacs-plugin-dir))
   (normal-top-level-add-subdirs-to-load-path))
 
-(add-to-list 'load-path "~/.emacs.default/plugins")
-(add-to-list 'load-path "~/.emacs.default/lisp")
+(add-to-list 'load-path zerrari-emacs-config-dir)
+(add-to-list 'load-path zerrari-emacs-plugin-dir)
 
 (require 'init-ui)
 (require 'init-utils)
@@ -46,6 +53,7 @@
 ;; (require 'init-wakatime)
 (require 'init-flycheck)
 (require 'init-icons)
+;; (require 'init-vterm)
 (require 'init-diminish)
 (require 'init-general)
 ;; (require 'init-functions)

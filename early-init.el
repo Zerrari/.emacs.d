@@ -24,6 +24,12 @@
 
 ;;; Code:
 
+(setq
+    ;; 不要缩放frame.
+    frame-inhibit-implied-resize t
+    ;; 不要自动启用package
+    package-enable-at-startup nil)
+
 (setq gc-cons-threshold most-positive-fixnum)
 
 (setq site-run-file nil)
