@@ -82,3 +82,9 @@
 [submodule "plugins/shell-pop"]
 	path = plugins/shell-pop
 	url = https://github.com/kyagi/shell-pop-el
+[submodule "plugins/arduino"]
+	path = plugins/arduino
+	url = https://github.com/stardiviner/arduino-mode.git
+[submodule "plugins/spinner"]
+	path = plugins/spinner
+	url = https://github.com/Malabarba/spinner.el

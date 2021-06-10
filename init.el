@@ -55,6 +55,7 @@
 (require 'init-icons)
 ;; (require 'init-vterm)
 (require 'init-diminish)
+(require 'init-arduino)
 (require 'init-general)
 ;; (require 'init-functions)
 
