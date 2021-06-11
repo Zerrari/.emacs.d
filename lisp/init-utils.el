@@ -24,11 +24,17 @@
 
 ;;; Code:
 
-(require 'indent-guide)
+;; (require 'indent-guide)
+(require 'highlight-indent-guides)
 (require 'rainbow-delimiters)
 (require 'hungry-delete)
+;(require 'format-all)
 
-(indent-guide-global-mode)
+;; (indent-guide-global-mode)
+
+(add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
+
+(setq highlight-indent-guides-method 'bitmap)
 
 (add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
 
@@ -61,6 +67,40 @@
 (setq default-directory "~/")
 
 (setq custom-file "~/.emacs.default/elisp/init-custom.el" )
+
+;; Vertical Scroll
+(setq scroll-step 1)
+(setq scroll-margin 1)
+(setq scroll-conservatively 101)
+(setq scroll-up-aggressively 0.01)
+(setq scroll-down-aggressively 0.01)
+(setq auto-window-vscroll nil)
+(setq fast-but-imprecise-scrolling nil)
+(setq mouse-wheel-scroll-amount '(1 ((shift) . 1)))
+(setq mouse-wheel-progressive-speed nil)
+;; Horizontal Scroll
+(setq hscroll-step 1)
+(setq hscroll-margin 1)
+
+(global-prettify-symbols-mode 1)
+
+(defun add-pretty-lambda ()
+  "Make some word or string show as pretty Unicode symbols.  See https://unicodelookup.com for more."
+  (setq prettify-symbols-alist
+        '(("lambda" . 955)
+          ("delta" . 120517)
+          ("epsilon" . 120518)
+          ("->" . 8594)
+          ("<=" . 8804)
+          (">=" . 8805))))
+
+(add-hook 'prog-mode-hook 'add-pretty-lambda)
+(add-hook 'org-mode-hook 'add-pretty-lambda)
+
+
+(setq initial-major-mode 'text-mode)
+;; https://www.youtube.com/watch?v=NfjsLmya1PI
+(setq initial-scratch-message "Stay hungry,stay foolish.\n")
 
 ;; recentf
 (require 'recentf)
@@ -156,6 +196,8 @@
   "Compile elisp file to elc."
   (byte-recompile-directory zerrari-emacs-plugin-dir 0 0)
   (message "Compilation completed!"))
+
+
 
 (provide 'init-utils)
 

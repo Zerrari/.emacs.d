@@ -41,6 +41,11 @@
 ;(require 'benchmark-init-loaddefs)
 ;(benchmark-init/activate)
 
+(require 'exec-path-from-shell)
+
+(when (memq window-system '(mac ns x))
+  (exec-path-from-shell-initialize))
+
 (require 'init-ui)
 (require 'init-utils)
 (require 'init-lazyload)

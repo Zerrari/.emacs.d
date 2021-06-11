@@ -97,3 +97,9 @@
 [submodule "plugins/s"]
 	path = plugins/s
 	url = https://github.com/magnars/s.el.git
+[submodule "plugins/highlight-indent-guides"]
+	path = plugins/highlight-indent-guides
+	url = https://github.com/DarthFennec/highlight-indent-guides
+[submodule "plugins/emacs-format-all-the-code"]
+	path = plugins/emacs-format-all-the-code
+	url = https://github.com/lassik/emacs-format-all-the-code
