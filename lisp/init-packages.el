@@ -24,64 +24,63 @@
 
 ;;; Code:
 
-(require 'cl)
+(require 'cl-lib)
 
 (require 'exec-path-from-shell)
 
 (when (memq window-system '(mac ns x))
   (exec-path-from-shell-initialize))
 
-;(defvar zerrari/packages '(
-		;;; --- Auto-completion ---
-		;company
-		;;; --- Better Editor ---
-		;hungry-delete
-		;ivy
-		;swiper
-		;counsel
-		;smartparens
-		;smex
-		;; which-key
-		;use-package
-		;;; --- Vim ---
-		;evil
-		;evil-leader
-		;evil-nerd-commenter
-		;;evil-surround
-		;key-chord
-		;;; --- Major Mode ---
-		;markdown-mode
-		;;; --- Minor Mode ---
-		;exec-path-from-shell
-		;wakatime-mode
-		;;; --- ui ---
-		;all-the-icons
-		;all-the-icons-dired
-		;rainbow-delimiters
-		;diminish
-		;;; --- Themes ---
-		;doom-themes
-		;;; --- Files ---
-		;ranger
-		;;; --- Programming ---
-		;flycheck
-		;quickrun
-		;;; projectile
-		;))
+(defvar zerrari/packages '(
+		;; --- Auto-completion ---
+		company
+		;; --- Better Editor ---
+		hungry-delete
+		ivy
+		swiper
+		counsel
+		smartparens
+		smex
+		which-key
+		use-package
+		;; --- Vim ---
+		evil
+		evil-leader
+		evil-nerd-commenter
+		evil-surround
+		key-chord
+		;; --- Major Mode ---
+		markdown-mode
+		;; --- Minor Mode ---
+		exec-path-from-shell
+		wakatime-mode
+		;; --- ui ---
+		all-the-icons
+		all-the-icons-dired
+		rainbow-delimiters
+		diminish
+		;; --- Themes ---
+		doom-themes
+		;; --- Files ---
+		ranger
+		;; --- Programming ---
+		flycheck
+		quickrun
+		projectile
+		))
 
-;(setq package-selected-packages zerrari/packages)
+(defun ensure-package-installed (&rest packages)
+  "Assure every package is installed, ask for installation if it’s not."
+  (mapcar
+   (lambda (package)
+     ;; (package-installed-p 'evil)
+     (if (eq package packages)
+	 t)
+         package)
+   zerrari/packages))
 
- ;(defun my/packages-installed-p ()
-     ;(loop for pkg in zerrari/packages
-	   ;when (not (package-installed-p pkg)) do (return nil)
-	   ;finally (return t)))
 
- ;(unless (my/packages-installed-p)
-     ;(message "%s" "Refreshing package database...")
-     ;(package-refresh-contents)
-     ;(dolist (pkg zerrari/packages)
-       ;(when (not (package-installed-p pkg))
-	 ;(package-install pkg))))
+(ensure-package-installed 'iedit 'magit)
 
 (provide 'init-packages)
 

@@ -4,6 +4,7 @@
 
 (general-nmap
   :prefix "SPC"
+  "a" 'auto-insert
   "c" 'evilnc-comment-or-uncomment-lines
   "r" 'quickrun)
 

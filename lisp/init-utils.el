@@ -157,10 +157,6 @@
   (byte-recompile-directory zerrari-emacs-plugin-dir 0 0)
   (message "Compilation completed!"))
 
-(defun install-package (pkg)
-  (let ((command-string (concat "git submodule add " pkg " " )))))
-  
-
 (provide 'init-utils)
 
 ;;; init-utils.el ends here

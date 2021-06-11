@@ -44,7 +44,7 @@
 (require 'init-ui)
 (require 'init-utils)
 (require 'init-lazyload)
-(require 'init-packages)
+;(require 'init-packages)
 (require 'init-evil)
 (require 'init-company)
 (require 'init-themes)
