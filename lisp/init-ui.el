@@ -28,17 +28,8 @@
 
 (set-face-attribute 'default nil :font "monaco 24")
 
-;; hide tool bar
-(tool-bar-mode -1)
-
-;; hide menu bar
-(menu-bar-mode -1)
-
 ;; shut down auto-save mode
 (auto-save-mode -1)
-
-;; hide scroll bar
-(scroll-bar-mode -1)
 
 ;; set line number
 (global-linum-mode 1)

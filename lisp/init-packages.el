@@ -28,11 +28,6 @@
 
 (require 'exec-path-from-shell)
 
-(setq package-archives '(("gnu"   . "http://elpa.emacs-china.org/gnu/")
-                         ("melpa" . "http://elpa.emacs-china.org/melpa/")))
-
-(package-initialize)
-
 (when (memq window-system '(mac ns x))
   (exec-path-from-shell-initialize))
 

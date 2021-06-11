@@ -88,3 +88,12 @@
 [submodule "plugins/spinner"]
 	path = plugins/spinner
 	url = https://github.com/Malabarba/spinner.el
+[submodule "plugins/benchmark"]
+	path = plugins/benchmark
+	url = https://github.com/dholm/benchmark-init-el.git
+[submodule "plugins/amx"]
+	path = plugins/amx
+	url = https://github.com/DarwinAwardWinner/amx
+[submodule "plugins/s"]
+	path = plugins/s
+	url = https://github.com/magnars/s.el.git

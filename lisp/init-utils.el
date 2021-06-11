@@ -152,6 +152,15 @@
   (interactive)
   (switch-to-buffer (other-buffer (current-buffer) 1)))
 
+(defun compile-elisp-file ()
+  "Compile elisp file to elc."
+  (byte-recompile-directory zerrari-emacs-plugin-dir 0 0)
+  (message "Compilation completed!"))
+
+(defun install-package (pkg)
+  (let ((command-string (concat "git submodule add " pkg " " )))))
+  
+
 (provide 'init-utils)
 
 ;;; init-utils.el ends here

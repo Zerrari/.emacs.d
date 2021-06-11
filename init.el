@@ -37,6 +37,10 @@
 (add-to-list 'load-path zerrari-emacs-config-dir)
 (add-to-list 'load-path zerrari-emacs-plugin-dir)
 
+;; test startup time
+;(require 'benchmark-init-loaddefs)
+;(benchmark-init/activate)
+
 (require 'init-ui)
 (require 'init-utils)
 (require 'init-lazyload)
@@ -46,7 +50,8 @@
 (require 'init-themes)
 (require 'init-smartparens)
 (require 'init-swiper)
-(require 'init-smex)
+;(require 'init-smex)
+(require 'init-amx)
 (require 'init-whichkey)
 (require 'init-markdown)
 (require 'init-quickrun)
