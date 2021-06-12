@@ -109,3 +109,9 @@
 [submodule "plugins/rainbow-identifiers"]
 	path = plugins/rainbow-identifiers
 	url = https://github.com/Fanael/rainbow-identifiers
+[submodule "plugins/telega"]
+	path = plugins/telega
+	url = https://github.com/zevlg/telega.el
+[submodule "plugins/hackernews"]
+	path = plugins/hackernews
+	url = https://github.com/clarete/hackernews.el
