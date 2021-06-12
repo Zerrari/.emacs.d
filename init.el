@@ -46,6 +46,12 @@
 (when (memq window-system '(mac ns x))
   (exec-path-from-shell-initialize))
 
+(setq url-gateway-method 'socks)
+(setq socks-server '("Default server" "127.0.0.1" 1086 5))
+
+(setq telega-proxies (list '(:server "127.0.0.1" :port 1086 :enable t
+			:type (:@type "proxyTypeSocks5")))
+
 (require 'init-ui)
 (require 'init-utils)
 (require 'init-lazyload)
@@ -67,6 +73,7 @@
 (require 'init-diminish)
 (require 'init-arduino)
 (require 'init-general)
+(require 'telega)
 ;; (require 'init-functions)
 
 ;;; init.el ends here

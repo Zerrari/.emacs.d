@@ -103,3 +103,9 @@
 [submodule "plugins/emacs-format-all-the-code"]
 	path = plugins/emacs-format-all-the-code
 	url = https://github.com/lassik/emacs-format-all-the-code
+[submodule "plugins/visual-fill-column"]
+	path = plugins/visual-fill-column
+	url = https://github.com/joostkremers/visual-fill-column
+[submodule "plugins/rainbow-identifiers"]
+	path = plugins/rainbow-identifiers
+	url = https://github.com/Fanael/rainbow-identifiers
