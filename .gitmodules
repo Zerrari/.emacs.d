@@ -115,3 +115,12 @@
 [submodule "plugins/hackernews"]
 	path = plugins/hackernews
 	url = https://github.com/clarete/hackernews.el
+[submodule "plugins/esup"]
+	path = plugins/esup
+	url = https://github.com/jschaf/esup
+[submodule "plugins/awesome-tab"]
+	path = plugins/awesome-tab
+	url = https://github.com/manateelazycat/awesome-tab
+[submodule "plugins/awesome-tray"]
+	path = plugins/awesome-tray
+	url = https://github.com/manateelazycat/awesome-tray

@@ -1,4 +1,4 @@
-;;; init-better-defaults1.el ---                     -*- lexical-binding: t; -*-
+;;; init-utils.el ---                     -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2021  zerrari
 
@@ -24,21 +24,24 @@
 
 ;;; Code:
 
-;; (require 'indent-guide)
-(require 'highlight-indent-guides)
+(require 'indent-guide)
+;; (require 'highlight-indent-guides)
 (require 'rainbow-delimiters)
 (require 'hungry-delete)
 ;(require 'format-all)
 
-;; (indent-guide-global-mode)
+(indent-guide-global-mode)
 
-(add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
+;; (add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
 
-(setq highlight-indent-guides-method 'bitmap)
+;; (setq highlight-indent-guides-method 'bitmap)
 
 (add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
 
 (global-hungry-delete-mode)
+
+;; disable key suggest in the echo area.
+(setq suggest-key-bindings nil)
 
 (setq tab-width 4)
 
@@ -197,7 +200,63 @@
   (byte-recompile-directory zerrari-emacs-plugin-dir 0 0)
   (message "Compilation completed!"))
 
+(defun quick-buffer-jump ()
+  "Quickly jump to buffer/file which name is current word."
+  (interactive)
+  (setq fname (current-word))
+  (setq blist (buffer-list))
+  (setq status nil)
+  (setq switchedbuffer "nil")
+  (dolist (value blist)
+    (when (and (bufferp value)
+               (buffer-file-name value)
+               (not status)
+               (string-match (concat "^" (regexp-quote fname))
+                             (buffer-name value)))
+      (progn (switch-to-buffer (buffer-name value))
+             (setq status t)
+             (setq switchedbuffer (buffer-name value)))
+      ))
+  (if status                     ;; success search in buffer list.
+      (message "skip to %s buffer" switchedbuffer)
+    (quick-file-jump)))       ;; find files in current path.
 
+(defun quick-file-jump ()
+  "Quickly open and jump file with name begin with current word."
+  (interactive)
+  (setq fname (current-word))
+  (setq switchedfile "nil")
+  ;; (setq dflist (directory-files (get-current-path)))
+  (setq dflist (directory-files-recursively (get-current-path) ""))
+  (setq status nil)
+  (dolist (value dflist)
+    (when (and (file-regular-p value)
+               (string-match 
+		(regexp-quote fname) value))
+      (find-file value)
+      (setq switchedfile value)
+      (setq status t)))
+  (if status
+	  (message "open and skip to %s file." switchedfile)
+	(message "no file.")))
+
+(defun get-current-path ()
+  "Get the current path."
+  (interactive)
+  (message (file-name-directory (buffer-file-name))))
+
+;; Disable buffer end warnings.
+;; https://emacs.stackexchange.com/questions/10932/how-do-you-disable-the-buffer-end-beginning-warnings-in-the-minibuffer
+
+(defun my-command-error-function (data context caller)
+  "Ignore the buffer-read-only, beginning-of-buffer,
+end-of-buffer signals; pass the rest to the default handler."
+  (when (not (memq (car data) '(buffer-read-only
+                                beginning-of-buffer
+                                end-of-buffer)))
+    (command-error-default-function data context caller)))
+
+(setq command-error-function #'my-command-error-function)
 
 (provide 'init-utils)
 

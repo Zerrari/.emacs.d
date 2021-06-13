@@ -1,4 +1,4 @@
-;;; init-ui1.el ---                                  -*- lexical-binding: t; -*-
+;;; init-ui.el ---                                  -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2021  zerrari
 
@@ -45,4 +45,4 @@
 
 (provide 'init-ui)
 
-;;; init-ui1.el ends here
+;;; init-ui.el ends here

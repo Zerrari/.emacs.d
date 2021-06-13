@@ -30,12 +30,6 @@
     ;; 不要自动启用package
     package-enable-at-startup nil)
 
-(setq gc-cons-threshold most-positive-fixnum)
-
-(defvar file-name-handler-alist-original file-name-handler-alist)
-
-(setq file-name-handler-alist nil)
-
 (setq site-run-file nil)
 
 (menu-bar-mode -1)
