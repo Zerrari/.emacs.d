@@ -26,7 +26,7 @@
  "e" 'eval-buffer
  "b" 'ivy-switch-buffer
  "p" 'change-previous-buffer
- "w" 'save-buffer
+ "w" 'save-some-buffers
  "q" 'save-buffers-kill-emacs)
 
 (general-nmap
