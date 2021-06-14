@@ -90,10 +90,11 @@
 	    (require 'init-amx)
 
 	    (require 'init-icons)
-	    ;; (require 'init-vterm)
+	    (require 'init-shell)
 	    (require 'init-arduino)
 	    ;; (require 'init-tools)
 	    (require 'init-diminish)
+		;; (require 'magit)
 	    ))))
 
 ;;; init.el ends here

@@ -127,3 +127,15 @@
 [submodule "plugins/snails"]
 	path = plugins/snails
 	url = https://github.com/manateelazycat/snails
+[submodule "plugins/magit"]
+	path = plugins/magit
+	url = https://github.com/magit/magit
+[submodule "plugins/with-editor"]
+	path = plugins/with-editor
+	url = https://github.com/magit/with-editor
+[submodule "plugins/transient"]
+	path = plugins/transient
+	url = https://github.com/magit/transient
+[submodule "plugins/aweshell"]
+	path = plugins/aweshell
+	url = https://github.com/manateelazycat/aweshell

@@ -208,6 +208,7 @@
 
 (defun compile-elisp-file ()
   "Compile elisp file to elc."
+  (interactive)
   (byte-recompile-directory zerrari-emacs-plugin-dir 0 0)
   (message "Compilation completed!"))
 
