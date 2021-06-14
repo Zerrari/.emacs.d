@@ -124,3 +124,6 @@
 [submodule "plugins/awesome-tray"]
 	path = plugins/awesome-tray
 	url = https://github.com/manateelazycat/awesome-tray
+[submodule "plugins/snails"]
+	path = plugins/snails
+	url = https://github.com/manateelazycat/snails

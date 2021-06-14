@@ -26,13 +26,14 @@
  "e" 'eval-buffer
  "b" 'ivy-switch-buffer
  "p" 'change-previous-buffer
- "w" 'save-some-buffers
+ "w" 'quick-save-buffers
  "q" 'save-buffers-kill-emacs)
 
 (general-nmap
   :prefix "SPC a"
   "j" 'awesome-tab-backward
   "k" 'awesome-tab-forward
+  "d" 'awesome-tab-kill-all-buffers-in-current-group
   "g" 'awesome-tab-switch-group
   "h" 'awesome-tab-ace-jump)
 

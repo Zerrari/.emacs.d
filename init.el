@@ -51,7 +51,7 @@
     (with-temp-message ""                 ;抹掉插件启动的输出
 
 	;; Make sure ENVs in Emacs same as in shell
-    (require 'esup)
+	;; (require 'esup)
 
 	(require 'exec-path-from-shell)
 
@@ -65,6 +65,7 @@
 	(require 'init-lazyload)
 
 	(require 'init-evil)
+	(require 'init-swiper)
 	(require 'init-awesome)
 
 	;; (require 'init-functions)
@@ -77,13 +78,13 @@
 	1 nil
 	#'(lambda ()
 	    (require 'init-company)
+	    ;; (require 'init-snails)
 	    (require 'init-whichkey)
 	    (require 'init-markdown)
 	    (require 'init-quickrun)
 	    ;; (require 'init-wakatime)
 	    (require 'init-flycheck)
 	    (require 'init-smartparens)
-	    (require 'init-swiper)
 
 	    ;; (require 'init-smex)
 	    (require 'init-amx)

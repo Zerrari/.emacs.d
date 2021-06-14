@@ -43,6 +43,8 @@
 ;; disable key suggest in the echo area.
 (setq suggest-key-bindings nil)
 
+(setq help-window-select t)
+
 (setq tab-width 4)
 
 (setq-default indent-tabs-mode t)
@@ -69,7 +71,7 @@
 
 (setq default-directory "~/")
 
-(setq custom-file "~/.emacs.default/elisp/init-custom.el" )
+(setq custom-file "~/.emacs.default/lisp/init-custom.el" )
 
 ;; Vertical Scroll
 (setq scroll-step 1)
@@ -110,6 +112,10 @@
 (recentf-mode 1)
 
 ;; define functions
+
+(defun display-startup-echo-area-message ()
+  (message nil))
+
 (defun newc()
   "Insert a template for c source code."
   (interactive)
@@ -156,6 +162,11 @@
  
 ;; show matching
 (add-hook 'emacs-lisp-mode-hook 'show-paren-mode)
+
+(defun quick-save-buffers ()
+  "Save buffers quickly and silently."
+  (interactive)
+  (save-some-buffers t))
 
 ;; Delete the current file
 
