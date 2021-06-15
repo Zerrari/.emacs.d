@@ -139,3 +139,6 @@
 [submodule "plugins/aweshell"]
 	path = plugins/aweshell
 	url = https://github.com/manateelazycat/aweshell
+[submodule "plugins/annalist"]
+	path = plugins/annalist
+	url = https://github.com/noctuid/annalist.el

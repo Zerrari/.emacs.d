@@ -64,7 +64,7 @@
 	(require 'init-themes)
 	(require 'init-lazyload)
 
-	(require 'init-evil)
+    (require 'init-evil)
 	(require 'init-swiper)
 	(require 'init-awesome)
 
