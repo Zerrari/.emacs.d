@@ -2,18 +2,18 @@
 ;; --------------------------------------------------------------------------
 ;; Desktop File for Emacs
 ;; --------------------------------------------------------------------------
-;; Created Sat Jun 19 18:52:27 2021
+;; Created Sat Jun 19 20:38:18 2021
 ;; Desktop file format version 208
 ;; Emacs version 27.2
 
 ;; Global section:
-(setq desktop-saved-frameset [frameset 1 (24781 52331 24681 0) (desktop . "208") "zerrari@zhangyizhongdeMacBook-Pro.local" nil nil ((((minibuffer . t) (fontsize . 0) (font . "-*-Monaco-normal-normal-normal-*-24-*-*-*-m-0-iso10646-1") (border-width . 0) (internal-border-width . 2) (right-divider-width . 0) (bottom-divider-width . 0) (vertical-scroll-bars) (horizontal-scroll-bars) (foreground-color . "#bbc2cf") (background-color . "#282c34") (line-spacing) (left-fringe . 8) (right-fringe . 8) (no-special-glyphs) (undecorated) (ns-appearance . unbound) (ns-transparent-titlebar . unbound) (z-group) (no-focus-on-map) (no-accept-focus) (menu-bar-lines . 1) (tool-bar-lines . 0) (title) (icon-type) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 15) (scroll-bar-height . 15) (alpha) (fullscreen . maximized) (display-type . color) (background-mode . dark) (cursor-color . "#ffffff") (environment) (frameset--id . "0979-EF5A-C6D9-3686") (frameset--mini t . t) (modeline . t) (unsplittable) (icon-name) (display . "zhangyizhongdeMacBook-Pro.local") (explicit-name) (tool-bar-position . top) (last-focus-update . t) (tabs (current-tab (name . "init-keymap.el") (explicit-name))) (visibility . t) (height . 23) (width . 90) (left . 0) (top . 23)) ((min-height . 4) (min-width . 10) (min-height-ignore . 2) (min-width-ignore . 6) (min-height-safe . 1) (min-width-safe . 2) (min-pixel-height . 128) (min-pixel-width . 140) (min-pixel-height-ignore . 64) (min-pixel-width-ignore . 84) (min-pixel-height-safe . 32) (min-pixel-width-safe . 28)) leaf (pixel-width . 1276) (pixel-height . 719) (total-width . 91) (total-height . 22) (normal-height . 1.0) (normal-width . 1.0) (buffer "init-keymap.el" (selected . t) (hscroll . 0) (fringes 8 8 nil nil) (margins 2) (scroll-bars nil 0 t nil 0 t nil) (vscroll . 0) (dedicated) (point . 1275) (start . 752)) (prev-buffers ("*Messages*" 683 683) ("init-keymap.el" 366 410) ("init-utils.el" 881 1220) ("lisp" 1 425) ("*scratch*" 1 1))))])
+(setq desktop-saved-frameset [frameset 1 (24781 58682 775814 0) (desktop . "208") "zerrari@zhangyizhongdeMacBook-Pro.local" nil nil ((((minibuffer . t) (fontsize . 0) (font . "-*-Monaco-normal-normal-normal-*-24-*-*-*-m-0-iso10646-1") (border-width . 0) (internal-border-width . 2) (right-divider-width . 0) (bottom-divider-width . 0) (vertical-scroll-bars) (horizontal-scroll-bars) (foreground-color . "#bbc2cf") (background-color . "#282c34") (line-spacing) (left-fringe . 8) (right-fringe . 8) (no-special-glyphs) (undecorated) (ns-appearance . unbound) (ns-transparent-titlebar . unbound) (z-group) (no-focus-on-map) (no-accept-focus) (menu-bar-lines . 1) (tool-bar-lines . 0) (title) (icon-type) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 15) (scroll-bar-height . 15) (alpha) (fullscreen . maximized) (display-type . color) (background-mode . dark) (cursor-color . "#ffffff") (environment) (frameset--id . "0979-EF5A-C6D9-3686") (frameset--mini t . t) (modeline . t) (unsplittable) (icon-name) (display . "zhangyizhongdeMacBook-Pro.local") (explicit-name) (tool-bar-position . top) (last-focus-update . t) (tabs (current-tab (name . "init-keymap.el") (explicit-name))) (visibility . t) (height . 23) (width . 90) (left . 0) (top . 23)) ((min-height . 4) (min-width . 10) (min-height-ignore . 2) (min-width-ignore . 6) (min-height-safe . 1) (min-width-safe . 2) (min-pixel-height . 128) (min-pixel-width . 140) (min-pixel-height-ignore . 64) (min-pixel-width-ignore . 84) (min-pixel-height-safe . 32) (min-pixel-width-safe . 28)) leaf (pixel-width . 1276) (pixel-height . 719) (total-width . 91) (total-height . 22) (normal-height . 1.0) (normal-width . 1.0) (buffer "init-keymap.el" (selected . t) (hscroll . 0) (fringes 8 8 nil nil) (margins 2) (scroll-bars nil 0 t nil 0 t nil) (vscroll . 0) (dedicated) (point . 1418) (start . 923)) (prev-buffers ("*scratch*" 1 23) ("*Messages*" 555 714) ("init-keymap.el" 923 1418) ("init-utils.el" 881 1220) ("lisp" 1 425))))])
 (setq desktop-missing-file-warning nil)
 (setq tags-file-name nil)
 (setq tags-table-list nil)
 (setq search-ring nil)
 (setq regexp-search-ring nil)
-(setq register-alist '((98 . "Hf'xj") (97 . [73 106 106 backspace backspace 106 106 backspace backspace escape 108]) (48 . #("    \"j\" 'awesome-tab-backward\n    \"k\" 'awesome-tab-forward\n    \"d\" 'awesome-tab-kill-all-buffers-in-current-group\n    \"g\" 'awesome-tab-switch-group\n    \"h\" 'awesome-tab-ace-jump)\n" 0 4 (fontified t yank-handler (evil-yank-line-handler nil t)) 4 6 (face font-lock-string-face fontified t yank-handler (evil-yank-line-handler nil t)) 6 7 (face font-lock-string-face fontified t yank-handler (evil-yank-line-handler nil t)) 7 16 (fontified t yank-handler (evil-yank-line-handler nil t)) 16 30 (fontified t yank-handler (evil-yank-line-handler nil t)) 30 33 (fontified t yank-handler (evil-yank-line-handler nil t)) 33 34 (fontified t yank-handler (evil-yank-line-handler nil t)) 34 37 (face font-lock-string-face fontified t yank-handler (evil-yank-line-handler nil t)) 37 49 (fontified t yank-handler (evil-yank-line-handler nil t)) 49 59 (fontified t yank-handler (evil-yank-line-handler nil t)) 59 63 (fontified t yank-handler (evil-yank-line-handler nil t)) 63 64 (face font-lock-string-face fontified t yank-handler (evil-yank-line-handler nil t)) 64 66 (face font-lock-string-face fontified t yank-handler (evil-yank-line-handler nil t)) 66 93 (fontified t yank-handler (evil-yank-line-handler nil t)) 93 114 (fontified t yank-handler (evil-yank-line-handler nil t)) 114 118 (fontified t yank-handler (evil-yank-line-handler nil t)) 118 119 (face font-lock-string-face fontified t yank-handler (evil-yank-line-handler nil t)) 119 121 (face font-lock-string-face fontified t yank-handler (evil-yank-line-handler nil t)) 121 122 (fontified t yank-handler (evil-yank-line-handler nil t)) 122 124 (fontified t yank-handler (evil-yank-line-handler nil t)) 124 128 (fontified t yank-handler (evil-yank-line-handler nil t)) 128 148 (fontified t yank-handler (evil-yank-line-handler nil t)) 148 152 (fontified t yank-handler (evil-yank-line-handler nil t)) 152 155 (face font-lock-string-face fontified t yank-handler (evil-yank-line-handler nil t)) 155 158 (fontified t yank-handler (evil-yank-line-handler nil t)) 158 159 (fontified t yank-handler (evil-yank-line-handler nil t)) 159 177 (fontified t yank-handler (evil-yank-line-handler nil t)) 177 178 (face (rainbow-delimiters-depth-1-face) fontified t yank-handler (evil-yank-line-handler nil t)) 178 179 (fontified t yank-handler (evil-yank-line-handler nil t))))))
+(setq register-alist '((98 . "Hf'xj") (97 . [73 40 106 106 escape 104 120 120 108 104 120 102 39 120 65 41 escape 106]) (48 . #("    \"k\" 'delete-window\n    \"s\" 'split-window-right\n    \"o\" 'other-window)\n" 0 4 (fontified t yank-handler (evil-yank-line-handler nil t)) 4 7 (face font-lock-string-face fontified t yank-handler (evil-yank-line-handler nil t)) 7 27 (fontified t yank-handler (evil-yank-line-handler nil t)) 27 30 (face font-lock-string-face fontified t yank-handler (evil-yank-line-handler nil t)) 30 55 (fontified t yank-handler (evil-yank-line-handler nil t)) 55 58 (face font-lock-string-face fontified t yank-handler (evil-yank-line-handler nil t)) 58 72 (fontified t yank-handler (evil-yank-line-handler nil t)) 72 73 (face (rainbow-delimiters-depth-1-face) fontified t yank-handler (evil-yank-line-handler nil t)) 73 74 (fontified t yank-handler (evil-yank-line-handler nil t))))))
 (setq file-name-history '(#("/Users/zerrari/.emacs.default/lisp/" 0 35 (ivy-index 0)) #("/Users/zerrari/.emacs.default/lisp/init-utils.el" 0 48 (ivy-index 0)) "~/.emacs.default/lisp/init-keymap.el" "~/Codes/test.ino" "~/.emacs.default/lisp/init-evil.el" "~/.emacs.default/plugins/evil-collection/evil-collection.el" "~/.emacs.default/README.md" "~/.emacs.default/lisp/init-shell.el" "~/.emacs.default/init.el" "~/.emacs.default/lisp/init-utils.el" "~/Codes/cpp/Chapter13/README.md" "~/Codes/cpp/Chapter13/pointerDemo1.cpp" "~/.emacs.default/lisp/init-flycheck.el" "~/.emacs.default/plugins/smartparens/docs/requirements.txt" "~/.emacs.default/plugins/flycheck/maint/requirements.txt" "~/.emacs.default/plugins/flycheck/doc/requirements.txt" "~/.emacs.default/lisp/init-lazyload.el" "~/.emacs.default/lisp/init-themes.el" "~/.emacs.default/lisp/init-ui.el" "~/.emacs.default/lisp/init-snails.el" "~/.emacs.default/lisp/init-awesome.el" "~/purcell/lisp/init-sessions.el"))
 
 ;; Buffer section -- buffers listed in same order as in buffer list:
@@ -22,12 +22,12 @@
   "init-keymap.el"
   'emacs-lisp-mode
   '(linum-mode indent-guide-mode rainbow-delimiters-mode hungry-delete-mode evil-collection-unimpaired-mode ivy-mode general-override-mode which-key-mode flycheck-mode smartparens-mode company-mode)
-  1275
-  '(1275 nil)
+  1418
+  '(1227 nil)
   nil
   nil
-  '((buffer-display-time 24781 52324 124997 0) (buffer-file-coding-system . prefer-utf-8-unix) (overwrite-mode))
-  '((mark-ring (1765 1148 387 387 387 92))))
+  '((buffer-display-time 24781 58682 396349 0) (buffer-file-coding-system . prefer-utf-8-unix) (overwrite-mode))
+  '((mark-ring (387 1902 2449 1902 387 387 387 92))))
 
 (desktop-create-buffer 208
   "/Users/zerrari/.emacs.default/lisp/init-utils.el"
@@ -38,7 +38,7 @@
   '(1220 nil)
   nil
   nil
-  '((buffer-display-time 24781 51689 389626 237000) (buffer-file-coding-system . prefer-utf-8-unix) (overwrite-mode))
+  '((buffer-display-time 24781 57064 899012 236000) (buffer-file-coding-system . prefer-utf-8-unix) (overwrite-mode))
   '((mark-ring (1322 1137 1808 1 1136))))
 
 (desktop-create-buffer 208
@@ -50,6 +50,6 @@
   '(nil nil)
   t
   '("/Users/zerrari/.emacs.default/lisp/")
-  '((tab-width . 1) (buffer-display-time 24781 52295 368332 0) (overwrite-mode))
+  '((tab-width . 1) (buffer-display-time 24781 57706 725307 0) (overwrite-mode))
   '((mark-ring nil)))
 

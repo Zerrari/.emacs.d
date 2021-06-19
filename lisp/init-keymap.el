@@ -20,64 +20,80 @@
     :states 'normal
     :prefix "SPC"
     :keymaps 'override
+    "a" 'hydra-awesometab/body
+    "b" 'hydra-buffers/body
     "c" 'evilnc-comment-or-uncomment-lines
+    "f" 'hydra-files/body
+    "w" 'hydra-windows/body
     "r" 'quickrun)
 
-(general-define-key
-    :states 'normal
-    :prefix "SPC w"
-    :keymaps 'override
-    "k" 'delete-window
-    "s" 'split-window-right
-    "o" 'other-window)
+(defhydra hydra-awesometab (:exit t)
+    ("j" awesome-tab-backward)
+    ("k" awesome-tab-forward)
+    ("d" awesome-tab-kill-all-buffers-in-current-group)
+    ("g" awesome-tab-switch-group)
+    ("h" awesome-tab-ace-jump))
 
-(general-define-key
-    :states 'normal
-    :prefix "SPC f"
-    :keymaps 'override
-    "d" 'delete-this-file
-    "f" 'quick-file-jump
-    "r" 'rename-this-file-and-buffer
-    "s" 'quick-load-init-file)
-
-;; (defhydra hydra-buffers (:exit t)
-;;     ("k" kill-buffer-and-window)
-;;     ("e" eval-buffer)
-;;     ("b" ivy-switch-buffer)
-;;     ("p" change-previous-buffer)
-;;     ("w" quick-save-buffers)
-;;     ("q" save-buffers-kill-emacs))
+(defhydra hydra-buffers (:exit t)
+    ("k" kill-buffer-and-window)
+    ("e" eval-buffer)
+    ("b" ivy-switch-buffer)
+    ("p" change-previous-buffer)
+    ("w" quick-save-buffers)
+    ("q" save-buffers-kill-emacs))
 
 ;; (defhydra hydra-comments (:exit t)
 ;;   ("r" comment-or-uncomment-region)
 ;;   ("l" evilnc-comment-or-uncomment-lines))
 
-(general-define-key
-    :states 'normal
-    :prefix "SPC b"
-    :keymaps 'override
-    "k" 'kill-buffer-and-window
-    "e" 'eval-buffer
-    "b" 'ivy-switch-buffer
-    "p" 'change-previous-buffer
-    "w" 'quick-save-buffers
-    "q" 'save-buffers-kill-emacs)
+(defhydra hydra-files (:exit t)
+    ("d" delete-this-file)
+    ("f" quick-file-jump)
+    ("r" rename-this-file-and-buffer)
+    ("s" quick-load-init-file))
 
-(general-define-key
-    :states 'normal
-    :prefix "SPC a"
-    :keymaps 'override
-    "j" 'awesome-tab-backward
-    "k" 'awesome-tab-forward
-    "d" 'awesome-tab-kill-all-buffers-in-current-group
-    "g" 'awesome-tab-switch-group
-    "h" 'awesome-tab-ace-jump)
+(defhydra hydra-windows (:exit t)
+    ("k" delete-window)
+    ("s" split-window-right)
+    ("o" other-window))
 
-;; (defhydra hydra-awesometab (:exit t)
-;;     ("j" awesome-tab-backward)
-;;     ("k" awesome-tab-forward)
-;;     ("d" awesome-tab-kill-all-buffers-in-current-group)
-;;     ("g" awesome-tab-switch-group)
-;;     ("h" awesome-tab-ace-jump))
+;; (general-define-key
+;;     :states 'normal
+;;     :prefix "SPC w"
+;;     :keymaps 'override
+;;     "k" 'delete-window
+;;     "s" 'split-window-right
+;;     "o" 'other-window)
+
+;; (general-define-key
+;;     :states 'normal
+;;     :prefix "SPC f"
+;;     :keymaps 'override
+;;     "d" 'delete-this-file
+;;     "f" 'quick-file-jump
+;;     "r" 'rename-this-file-and-buffer
+;;     "s" 'quick-load-init-file)
+
+;; (general-define-key
+;;     :states 'normal
+;;     :prefix "SPC b"
+;;     :keymaps 'override
+;;     "k" 'kill-buffer-and-window
+;;     "e" 'eval-buffer
+;;     "b" 'ivy-switch-buffer
+;;     "p" 'change-previous-buffer
+;;     "w" 'quick-save-buffers
+;;     "q" 'save-buffers-kill-emacs)
+
+;; (general-define-key
+;;     :states 'normal
+;;     :prefix "SPC a"
+;;     :keymaps 'override
+;;     "j" 'awesome-tab-backward
+;;     "k" 'awesome-tab-forward
+;;     "d" 'awesome-tab-kill-all-buffers-in-current-group
+;;     "g" 'awesome-tab-switch-group
+;;     "h" 'awesome-tab-ace-jump)
+
 
 (provide 'init-keymap)
