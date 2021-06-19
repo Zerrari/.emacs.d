@@ -142,3 +142,6 @@
 [submodule "plugins/annalist"]
 	path = plugins/annalist
 	url = https://github.com/noctuid/annalist.el
+[submodule "plugins/hydra"]
+	path = plugins/hydra
+	url = https://github.com/abo-abo/hydra

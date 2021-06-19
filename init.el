@@ -71,7 +71,7 @@
 	;; (require 'init-functions)
 	;; (require 'init-packages)
 
-	(require 'init-general)
+	(require 'init-keymap)
 
 	;; 可以延后加载的
 	(run-with-idle-timer
