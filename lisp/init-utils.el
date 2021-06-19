@@ -67,6 +67,8 @@
 
 (global-eldoc-mode 0)
 
+(desktop-save-mode 1)
+
 (setq make-backup-files nil)
 
 (setq default-directory "~/")
