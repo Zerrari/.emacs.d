@@ -1,4 +1,6 @@
 auto-save-list
 recentf
+.emacs.desktop
+.mc-lists.el
 amx-items
 smex-items
