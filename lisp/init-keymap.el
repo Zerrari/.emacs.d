@@ -26,7 +26,7 @@ _l_: forward       _h_: backward        _j_: next       _k_: previous
     :keymaps 'override
     "a" 'hydra-awesometab/body
     "b" 'hydra-buffers/body
-    "c" 'evilnc-comment-or-uncomment-lines
+    "c" 'hydra-comments/body
     "f" 'hydra-files/body
     "w" 'hydra-windows/body
     "r" 'quickrun)
@@ -67,9 +67,18 @@ _p_: previous buffer           _w_: save buffers  _q_: save buffers and kill Ema
     ("w" quick-save-buffers)
     ("q" save-buffers-kill-emacs))
 
-;; (defhydra hydra-comments (:exit t)
-;;   ("r" comment-or-uncomment-region)
-;;   ("l" evilnc-comment-or-uncomment-lines))
+(defhydra hydra-comments (:exit t
+		          :idle 2
+			  :hint nil)
+"
+-------------------------------------------------------------
+                           Comments
+_r_: comment or uncomment region
+_l_: comment or uncomment lines
+" 
+  ("r" comment-or-uncomment-region)
+  ("l" evilnc-comment-or-uncomment-lines)
+  ("q" nil "quit"))
 
 (defhydra hydra-files (:hint nil
 		       :idle 2
