@@ -3,7 +3,7 @@
 ;; Copyright (C) 2021  zerrari
 
 ;; Author: zerrari <zerrari@zhangyizhongdeMacBook-Pro.local>
-;; Keywords: 
+;; Keywords:
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -20,7 +20,7 @@
 
 ;;; Commentary:
 
-;; 
+;;
 
 ;;; Code:
 
@@ -42,7 +42,7 @@
 
     ;; Add plugins dir with its subdirs
     (let ((default-directory  zerrari-emacs-plugin-dir))
-	(normal-top-level-add-subdirs-to-load-path))
+	    (normal-top-level-add-subdirs-to-load-path))
 
     ;; Add pluins dir to load path
     (add-to-list 'load-path zerrari-emacs-config-dir)
@@ -64,7 +64,9 @@
 	(require 'init-themes)
 	(require 'init-lazyload)
 
-    (require 'init-evil)
+	(require 'init-autosave)
+
+	(require 'init-evil)
 	(require 'init-swiper)
 	(require 'init-awesome)
 
@@ -94,6 +96,7 @@
 	    (require 'init-arduino)
 	    ;; (require 'init-tools)
 	    (require 'init-diminish)
+        (require 'speed-type)
 		;; (require 'magit)
 	    ))))
 
