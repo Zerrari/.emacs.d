@@ -145,3 +145,9 @@
 [submodule "plugins/hydra"]
 	path = plugins/hydra
 	url = https://github.com/abo-abo/hydra
+[submodule "plugins/speed-type"]
+	path = plugins/speed-type
+	url = https://github.com/parkouss/speed-type
+[submodule "plugins/auto-save"]
+	path = plugins/auto-save
+	url = https://github.com/manateelazycat/auto-save
