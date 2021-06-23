@@ -10,7 +10,7 @@
 "
 ^^^^^^^^-----------------------------------------------------------------
 _l_: forward       _h_: backward        _j_: next       _k_: previous
-" 
+"
   ("l" forward-char)
   ("h" backward-char)
   ("j" next-line)
@@ -29,6 +29,7 @@ _l_: forward       _h_: backward        _j_: next       _k_: previous
     "c" 'hydra-comments/body
     "f" 'hydra-files/body
     "w" 'hydra-windows/body
+    "y" 'hydra-youdao/body
     "r" 'quickrun)
 
 (defhydra hydra-awesometab (:hint nil
@@ -37,10 +38,10 @@ _l_: forward       _h_: backward        _j_: next       _k_: previous
 "
 ---------------------------------------------------------------------------------
                                Awesome Tab
-_j_: tab backward    _k_: tab forward    _d_: kill buffers in current group 
+_j_: tab backward    _k_: tab forward    _d_: kill buffers in current group
 _a_: first tab       _s_: end tab        _r_: kill other buffers in current group
 _g_: switch group    _h_: tab jump
-" 
+"
     ("j" awesome-tab-backward)
     ("k" awesome-tab-forward)
     ("a" awesome-tab-select-beg-tab)
@@ -59,7 +60,7 @@ _g_: switch group    _h_: tab jump
                                    Buffers
 _k_: kill buffer and window    _e_: eval buffer   _b_: switch buffer
 _p_: previous buffer           _w_: save buffers  _q_: save buffers and kill Emacs
-" 
+"
     ("k" kill-buffer-and-window)
     ("e" eval-buffer)
     ("b" ivy-switch-buffer)
@@ -75,7 +76,7 @@ _p_: previous buffer           _w_: save buffers  _q_: save buffers and kill Ema
                            Comments
 _r_: comment or uncomment region
 _l_: comment or uncomment lines
-" 
+"
   ("r" comment-or-uncomment-region)
   ("l" evilnc-comment-or-uncomment-lines)
   ("q" nil "quit"))
@@ -88,7 +89,7 @@ _l_: comment or uncomment lines
                            Files
 _d_: delete file    _f_: quick file jump    _r_: rename file
 _s_: load config
-" 
+"
     ("d" delete-this-file)
     ("f" quick-file-jump)
     ("r" rename-this-file-and-buffer)
@@ -103,10 +104,23 @@ _s_: load config
                            Windows
 _k_: delete window    _s_: spilt window right    _o_: other window
 _s_: load config
-" 
+"
     ("k" delete-window)
     ("s" split-window-right)
     ("o" other-window)
+    ("q" nil "quit"))
+
+(defhydra hydra-youdao (:hint nil
+			 :idle 2
+			 :exit t)
+"
+-------------------------------------------------------------
+                           Youdao
+_a_: search at point    _s_: search from input     _o_: posframe
+"
+    ("a" youdao-dictionary-search-at-point+)
+    ("s" youdao-dictionary-search-from-input)
+    ("o" youdao-dictionary-search-at-point-posframe)
     ("q" nil "quit"))
 
 ;; (general-define-key

@@ -98,8 +98,8 @@
 	    ;; (require 'init-sdcv)
 	    ;; (require 'init-tools)
 	    (require 'init-diminish)
-        (require 'speed-type)
-		;; (require 'magit)
+	    ;; (require 'speed-type)
+	    ;; (require 'magit)
 	    ))))
 
 ;;; init.el ends here
