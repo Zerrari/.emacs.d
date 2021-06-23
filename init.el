@@ -48,6 +48,13 @@
     (add-to-list 'load-path zerrari-emacs-config-dir)
     (add-to-list 'load-path zerrari-emacs-plugin-dir)
 
+    (setq url-gateway-method 'socks)
+
+    (setq socks-server '("Default server" "127.0.0.1" 1086 5))
+
+    (setq telega-proxies (list '(:server "127.0.0.1" :port 1086 :enable t
+			:type (:@type "proxyTypeSocks5"))))
+
     (with-temp-message ""                 ;抹掉插件启动的输出
 
 	;; Make sure ENVs in Emacs same as in shell
@@ -69,6 +76,7 @@
 	(require 'init-evil)
 	(require 'init-swiper)
 	(require 'init-awesome)
+	(require 'telega)
 
 	;; (require 'init-functions)
 	;; (require 'init-packages)
