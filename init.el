@@ -93,7 +93,9 @@
 
 	    (require 'init-icons)
 	    (require 'init-shell)
-	    (require 'init-arduino)
+	    (require 'init-youdao)
+	    ;; (require 'init-arduino)
+	    ;; (require 'init-sdcv)
 	    ;; (require 'init-tools)
 	    (require 'init-diminish)
         (require 'speed-type)

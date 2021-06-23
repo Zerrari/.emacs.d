@@ -151,3 +151,24 @@
 [submodule "plugins/auto-save"]
 	path = plugins/auto-save
 	url = https://github.com/manateelazycat/auto-save
+[submodule "plugins/sdcv"]
+	path = plugins/sdcv
+	url = https://github.com/manateelazycat/sdcv
+[submodule "plugins/posframe"]
+	path = plugins/posframe
+	url = https://github.com/tumashu/posframe
+[submodule "plugins/youdao-dictionary"]
+	path = plugins/youdao-dictionary
+	url = https://github.com/xuchunyang/youdao-dictionary.el
+[submodule "plugins/pos-tip"]
+	path = plugins/pos-tip
+	url = https://github.com/pitkali/pos-tip
+[submodule "plugins/popup"]
+	path = plugins/popup
+	url = https://github.com/auto-complete/popup-el
+[submodule "plugins/chinese-word-at-point"]
+	path = plugins/chinese-word-at-point
+	url = https://github.com/xuchunyang/chinese-word-at-point.el
+[submodule "plugins/names"]
+	path = plugins/names
+	url = https://github.com/Malabarba/names
