@@ -169,3 +169,9 @@
 [submodule "plugins/names"]
 	path = plugins/names
 	url = https://github.com/Malabarba/names
+[submodule "plugins/telega"]
+	path = plugins/telega
+	url = https://github.com/zevlg/telega.el/tree/releases
+[submodule "plugins/nox"]
+	path = plugins/nox
+	url = https://github.com/manateelazycat/nox

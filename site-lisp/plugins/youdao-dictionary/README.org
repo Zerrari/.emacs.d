@@ -1,0 +1,61 @@
+* Youdao Dictionary interface for Emacs
+
+[[http://melpa.org/#/youdao-dictionary][file:http://melpa.org/packages/youdao-dictionary-badge.svg]]
+[[http://stable.melpa.org/#/youdao-dictionary][file:http://stable.melpa.org/packages/youdao-dictionary-badge.svg]]
+
+=youdao-dictionary= is a simple [[http://dict.youdao.com/][Youdao Dictionary (有道词典)]] interface for Emacs.
+
+** Installation
+
+Install =youdao-dictionary= from [[http://melpa.org/][MELPA]] with: 
+
+=M-x package-install RET youdao-dictionary RET=
+
+** Usage
+- =youdao-dictionary-search-at-point= :: Search word at point and display result
+     with buffer
+- =youdao-dictionary-search-at-point+= :: Search word at point and display
+     result with popup-tip
+- =youdao-dictionary-search-at-point-tooltip= :: Search word at point and display
+     result with tooltip
+- =youdao-dictionary-search-at-point-posframe= :: Search word at point and display
+     result with posframe
+- =youdao-dictionary-search-from-input= :: Search word from input and display
+     result with buffer
+- =youdao-dictionary-search-and-replace= :: Search word at point and display
+     result with popup-menu, replace word with selected translation.
+- =youdao-dictionary-play-voice-at-point= :: Play voice of word at point (by [[https://github.com/snyh][@snyh]])
+- =youdao-dictionary-play-voice-from-input= :: Play voice of word from input (by [[https://github.com/snyh][@snyh]])
+
+** Customization
+- =youdao-dictionary-posframe-tip-face= :: Face for posframe buffer, defaut to inherit =tooltip=
+
+** Sample configuration
+
+#+BEGIN_SRC emacs-lisp
+;; Enable Cache
+(setq url-automatic-caching t)
+
+;; Example Key binding
+(global-set-key (kbd "C-c y") 'youdao-dictionary-search-at-point)
+
+;; Integrate with popwin-el (https://github.com/m2ym/popwin-el)
+;; (push "*Youdao Dictionary*" popwin:special-display-config)
+
+;; Set file path for saving search history
+;; (setq youdao-dictionary-search-history-file "~/.emacs.d/.youdao")
+
+;; Enable Chinese word segmentation support (支持中文分词)
+;; (setq youdao-dictionary-use-chinese-word-segmentation t)
+#+END_SRC
+
+*Notes*: A external Chinese word segmentation tool (e.g. [[https://github.com/fxsjy/jieba][结巴分词]]) is
+needed to enable Chinese word segmentation support. For more info, see
+[[https://github.com/xuchunyang/chinese-word-at-point.el#prerequisite][chinese-word-at-point.el#prerequisite]].
+
+
+** Related tools
+
+- [[https://github.com/felixonmars/ydcv][ydcv]] :: YouDao Console Version
+- [[https://github.com/afc163/fanyi][fanyi]] :: A translate tool in your command line (supports both Youdao
+     and iciba)

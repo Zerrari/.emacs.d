@@ -66,14 +66,16 @@
 	(exec-path-from-shell-initialize))
 
 	(require 'init-ui)
-	(require 'init-utils)
+
+    (require 'init-utils)
 
 	(require 'init-themes)
 	(require 'init-lazyload)
 
 	(require 'init-autosave)
 
-	(require 'init-evil)
+    (require 'init-evil)
+
 	(require 'init-swiper)
 	(require 'init-awesome)
 	(require 'telega)
@@ -98,6 +100,8 @@
 
 	    ;; (require 'init-smex)
 	    (require 'init-amx)
+
+        ;(require 'init-nox)
 
 	    (require 'init-icons)
 	    (require 'init-shell)

@@ -1,0 +1,60 @@
+#+TODO: TODO(t) MAYBE(m) IN-PROGRESS(p) WAITING(w) | DONE(d) CANCELED(c)
+
+* Important (but after melpa)
+** TODO More builtin types (settings, hooks, and advice)
+** TODO Todos in annalist.el
+*** TODO option to do newest to oldest
+for both headings and table
+
+default is oldest to newest
+
+*** TODO delete empty tables then headings
+*** TODO handle active map check for minor mode def
+*** TODO ellipsis alignment issue
+*** TODO missing tests
+** TODO support multiline table format as alternative to extraction
+** MAYBE Escaping = and ~ for verbatim and code?
+Org actually seems to handle this fine.
+
+* Minor (after melpa)
+** TODO indent function issues
+either set to custom indent function in test file or stop using custom indent function
+
+** TODO Get undercover.el working (hangs)
+** TODO print message if no records
+** TODO Allow custom truncation
+e.g. lambda to (lambda () …) like in evil-collection
+
+** TODO Allow adding extra entries on display (calculated entries)
+** MAYBE =:package= inference for keybindings if :package not present (based on prefix)
+** MAYBE Customizable display buffer name?
+Like in evil-collection currently. I'm not sure if there would be a reason to change the name.
+
+** MAYBE support for unrecording?
+For example with an :unrecord (or :burn or :burn-page)
+
+** MAYBE Local predicates for row entries
+predicate for entire row seems sufficient
+
+* Very Minor
+** CANCELED Data structure independent from how data is presented
+This seems too difficult to do for the small benefit. Different views of the records (e.g. changing some heading items to table entries or vice versa) is still possible by maintaining multiple data stores.
+
+See [[*Emacssql Storage][Emacssql Storage]].
+
+* MAYBE Emacsql Storage
+The current storage method has some limitations. It's not possible to change the =:table-start-index= without recording information multiple times. Rearranging the order of the items before =:table-start-index= would also be fairly complicated. Multiple views and more complex filtering, sorting, rearranging, etc. would be much easier with actual sql queries. A database could either be used to record information immediately or created on demand when describing to prevent having to create it during startup. This should not be the default as it would likely cause a lot of confusion.
+
+Here is a list of some things this would make easy:
+- heading/column reordering (hard for headings because of storage data structure)
+- changing at which item to start printing the table
+- selectively not printing some items (hard for headings because of storage data structure)
+- group by, filtering, sorting, etc. (e.g. sorting by created or updated time)
+- easy merging of records recorded by different packages (could workaround by having an 'all annalist)
+- math if ever needed
+
+Working around a lot of these issues without a database is possible but would be pretty difficult or take a lot of extra space and possibly time (lots of conversion from one storage format to another).
+
+Whether using a database is worth the extra complexity is yet to be determined, but the current definition syntax should at least be extensible to allow it if desired.
+
+It would probably make sense to convert query results back to the form already used for storage so existing keywords would still work, and so that another implementation for describing would not be necessary.

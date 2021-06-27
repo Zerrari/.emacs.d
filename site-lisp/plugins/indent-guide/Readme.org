@@ -1,0 +1,79 @@
+* indent-guide.el
+
+インデントを縦線で表示
+
+show vertical lines to guide indentation
+
+** Screencast
+
+Current block only
+
+[[screencast.gif]]
+
+All blocks
+
+[[screencast2.gif]]
+
+** Usage
+
+Require this script
+
+: (require 'indent-guide)
+
+and call command =M-x indent-guide-mode=.
+
+If you want to enable =indent-guide-mode= in all buffers, call
+function =indent-guide-global-mode=.
+
+: (indent-guide-global-mode)
+
+** Configuration
+
+Column lines are propertized with =indent-guide-face=. So you may
+configure this face to make lines more pretty in your colorscheme.
+
+: (set-face-background 'indent-guide-face "dimgray")
+
+If you want indent-guide to show guide lines only in idle-time, you
+can set delay.
+
+: (setq indent-guide-delay 0.1)
+
+You may also change the character for guides.
+
+: (setq indent-guide-char ":")
+
+NOT RECOMMENDED: To show not only one guide line but all guide lines
+recursively, set =indent-guide-recursive= non-nil.
+
+: (setq indent-guide-recursive t)
+
+=indent-guide-recursive= seems buggy and laggy, so I recommend
+the =highlight-indentation= package for that purpose.
+
+** Comparisons with highlight-indentation
+
+- look and feel
+
+- better block detection in LISP-like languages
+
+  : (foo                  (foo
+  : |(foobar baz          |(foobar baz
+  : ||       (foobar      |   |   |(foobar
+  : ||       |(qux))))    |   |   | (qux))))
+  :
+  :    indent-guide     highlight-indentation
+
+- supports TABs
+
+- worse in performance, especially when you open a file that includes
+  very large, deep blocks
+
+** Known Limitations
+
+does not work perfectly with following modes (commands) :
+
+- =company-mode=, =auto-complete-mode=, =popup.el= (tooltips may not rendered perfectly)
+- =pager.el= (guide lines are not rendered immediately, after =pager-up/down=)
+
+contributions are welcome !
