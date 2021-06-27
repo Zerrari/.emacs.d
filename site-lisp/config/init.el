@@ -35,9 +35,9 @@
       (gc-cons-percentage 0.6)
       (file-name-handler-alist nil))
 
-    (defvar zerrari-emacs-root-dir "~/.emacs.default")
-    (defvar zerrari-emacs-config-dir (concat zerrari-emacs-root-dir "/lisp"))
-    (defvar zerrari-emacs-plugin-dir (concat zerrari-emacs-root-dir "/plugins"))
+    ;(defvar zerrari-emacs-root-dir "~/.emacs.default/site-lisp")
+    ;(defvar zerrari-emacs-config-dir (concat zerrari-emacs-root-dir "/config"))
+    ;(defvar zerrari-emacs-plugin-dir (concat zerrari-emacs-root-dir "/plugins"))
 
 
     ;; Add plugins dir with its subdirs
@@ -113,5 +113,7 @@
 	    ;; (require 'speed-type)
 	    ;; (require 'magit)
 	    ))))
+
+(provide 'init)
 
 ;;; init.el ends here
