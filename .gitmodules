@@ -1,177 +1,177 @@
-[submodule "plugins/evil"]
-	path = plugins/evil
+[submodule "evil"]
+	path = site-lisp/plugins/evil
 	url = https://github.com/emacs-evil/evil
-[submodule "plugins/flycheck"]
-	path = plugins/flycheck
+[submodule "flycheck"]
+	path = site-lisp/plugins/flycheck
 	url = https://github.com/flycheck/flycheck
-[submodule "plugins/company"]
-	path = plugins/company
+[submodule "company"]
+	path = site-lisp/plugins/company
 	url = https://github.com/company-mode/company-mode
-[submodule "plugins/smartparens"]
-	path = plugins/smartparens
+[submodule "smartparens"]
+	path = site-lisp/plugins/smartparens
 	url = https://github.com/Fuco1/smartparens
-[submodule "plugins/evil-leader"]
-	path = plugins/evil-leader
+[submodule "evil-leader"]
+	path = site-lisp/plugins/evil-leader
 	url = https://github.com/cofi/evil-leader
-[submodule "plugins/smex"]
-	path = plugins/smex
+[submodule "smex"]
+	path = site-lisp/plugins/smex
 	url = https://github.com/nonsequitur/smex
-[submodule "plugins/which-key"]
-	path = plugins/which-key
+[submodule "which-key"]
+	path = site-lisp/plugins/which-key
 	url = https://github.com/justbur/emacs-which-key
-[submodule "plugins/evil-nerd-commenter"]
-	path = plugins/evil-nerd-commenter
+[submodule "evil-nerd-commenter"]
+	path = site-lisp/plugins/evil-nerd-commenter
 	url = https://github.com/redguardtoo/evil-nerd-commenter
-[submodule "plugins/key-chord"]
-	path = plugins/key-chord
+[submodule "key-chord"]
+	path = site-lisp/plugins/key-chord
 	url = https://github.com/sdellysse/key-chord.el
-[submodule "plugins/swiper"]
-	path = plugins/swiper
+[submodule "swiper"]
+	path = site-lisp/plugins/swiper
 	url = https://github.com/abo-abo/swiper
-[submodule "plugins/hungry-delete"]
-	path = plugins/hungry-delete
+[submodule "hungry-delete"]
+	path = site-lisp/plugins/hungry-delete
 	url = https://github.com/nflath/hungry-delete
-[submodule "plugins/markdown-mode"]
-	path = plugins/markdown-mode
+[submodule "markdown-mode"]
+	path = site-lisp/plugins/markdown-mode
 	url = https://github.com/jrblevin/markdown-mode
-[submodule "plugins/wakatime-mode"]
-	path = plugins/wakatime-mode
+[submodule "wakatime-mode"]
+	path = site-lisp/plugins/wakatime-mode
 	url = https://github.com/wakatime/wakatime-mode
-[submodule "plugins/exec-path-from-shell"]
-	path = plugins/exec-path-from-shell
+[submodule "exec-path-from-shell"]
+	path = site-lisp/plugins/exec-path-from-shell
 	url = https://github.com/purcell/exec-path-from-shell
-[submodule "plugins/all-the-icons"]
-	path = plugins/all-the-icons
+[submodule "all-the-icons"]
+	path = site-lisp/plugins/all-the-icons
 	url = https://github.com/domtronn/all-the-icons.el
-[submodule "plugins/all-the-icons-dired"]
-	path = plugins/all-the-icons-dired
+[submodule "all-the-icons-dired"]
+	path = site-lisp/plugins/all-the-icons-dired
 	url = https://github.com/jtbm37/all-the-icons-dired
-[submodule "plugins/rainbow-delimiters"]
-	path = plugins/rainbow-delimiters
+[submodule "rainbow-delimiters"]
+	path = site-lisp/plugins/rainbow-delimiters
 	url = https://github.com/Fanael/rainbow-delimiters
-[submodule "plugins/quickrun"]
-	path = plugins/quickrun
+[submodule "quickrun"]
+	path = site-lisp/plugins/quickrun
 	url = https://github.com/emacsorphanage/quickrun
-[submodule "plugins/diminish"]
-	path = plugins/diminish
+[submodule "diminish"]
+	path = site-lisp/plugins/diminish
 	url = https://github.com/myrjola/diminish.el
-[submodule "plugins/doom-themes"]
-	path = plugins/doom-themes
+[submodule "doom-themes"]
+	path = site-lisp/plugins/doom-themes
 	url = https://github.com/hlissner/emacs-doom-themes
-[submodule "plugins/ranger"]
-	path = plugins/ranger
+[submodule "ranger"]
+	path = site-lisp/plugins/ranger
 	url = https://github.com/ralesi/ranger.el
-[submodule "plugins/dash"]
-	path = plugins/dash
+[submodule "dash"]
+	path = site-lisp/plugins/dash
 	url = https://github.com/magnars/dash.el
-[submodule "plugins/lazy-load"]
-	path = plugins/lazy-load
+[submodule "lazy-load"]
+	path = site-lisp/plugins/lazy-load
 	url = https://github.com/manateelazycat/lazy-load
-[submodule "plugins/evil-collection"]
-	path = plugins/evil-collection
+[submodule "evil-collection"]
+	path = site-lisp/plugins/evil-collection
 	url = https://github.com/emacs-evil/evil-collection
-[submodule "plugins/indent-guide"]
-	path = plugins/indent-guide
+[submodule "indent-guide"]
+	path = site-lisp/plugins/indent-guide
 	url = https://github.com/zk-phi/indent-guide
-[submodule "plugins/general"]
-	path = plugins/general
+[submodule "general"]
+	path = site-lisp/plugins/general
 	url = https://github.com/noctuid/general.el
-[submodule "plugins/vterm"]
-	path = plugins/vterm
+[submodule "vterm"]
+	path = site-lisp/plugins/vterm
 	url = https://github.com/akermu/emacs-libvterm.git
-[submodule "plugins/shell-pop"]
-	path = plugins/shell-pop
+[submodule "shell-pop"]
+	path = site-lisp/plugins/shell-pop
 	url = https://github.com/kyagi/shell-pop-el
-[submodule "plugins/arduino"]
-	path = plugins/arduino
+[submodule "arduino"]
+	path = site-lisp/plugins/arduino
 	url = https://github.com/stardiviner/arduino-mode.git
-[submodule "plugins/spinner"]
-	path = plugins/spinner
+[submodule "spinner"]
+	path = site-lisp/plugins/spinner
 	url = https://github.com/Malabarba/spinner.el
-[submodule "plugins/benchmark"]
-	path = plugins/benchmark
+[submodule "benchmark"]
+	path = site-lisp/plugins/benchmark
 	url = https://github.com/dholm/benchmark-init-el.git
-[submodule "plugins/amx"]
-	path = plugins/amx
+[submodule "amx"]
+	path = site-lisp/plugins/amx
 	url = https://github.com/DarwinAwardWinner/amx
-[submodule "plugins/s"]
-	path = plugins/s
+[submodule "s"]
+	path = site-lisp/plugins/s
 	url = https://github.com/magnars/s.el.git
-[submodule "plugins/highlight-indent-guides"]
-	path = plugins/highlight-indent-guides
+[submodule "highlight-indent-guides"]
+	path = site-lisp/plugins/highlight-indent-guides
 	url = https://github.com/DarthFennec/highlight-indent-guides
-[submodule "plugins/emacs-format-all-the-code"]
-	path = plugins/emacs-format-all-the-code
+[submodule "emacs-format-all-the-code"]
+	path = site-lisp/plugins/emacs-format-all-the-code
 	url = https://github.com/lassik/emacs-format-all-the-code
-[submodule "plugins/visual-fill-column"]
-	path = plugins/visual-fill-column
+[submodule "visual-fill-column"]
+	path = site-lisp/plugins/visual-fill-column
 	url = https://github.com/joostkremers/visual-fill-column
-[submodule "plugins/rainbow-identifiers"]
-	path = plugins/rainbow-identifiers
+[submodule "rainbow-identifiers"]
+	path = site-lisp/plugins/rainbow-identifiers
 	url = https://github.com/Fanael/rainbow-identifiers
-[submodule "plugins/hackernews"]
-	path = plugins/hackernews
+[submodule "hackernews"]
+	path = site-lisp/plugins/hackernews
 	url = https://github.com/clarete/hackernews.el
-[submodule "plugins/esup"]
-	path = plugins/esup
+[submodule "esup"]
+	path = site-lisp/plugins/esup
 	url = https://github.com/jschaf/esup
-[submodule "plugins/awesome-tab"]
-	path = plugins/awesome-tab
+[submodule "awesome-tab"]
+	path = site-lisp/plugins/awesome-tab
 	url = https://github.com/manateelazycat/awesome-tab
-[submodule "plugins/awesome-tray"]
-	path = plugins/awesome-tray
+[submodule "awesome-tray"]
+	path = site-lisp/plugins/awesome-tray
 	url = https://github.com/manateelazycat/awesome-tray
-[submodule "plugins/snails"]
-	path = plugins/snails
+[submodule "snails"]
+	path = site-lisp/plugins/snails
 	url = https://github.com/manateelazycat/snails
-[submodule "plugins/magit"]
-	path = plugins/magit
+[submodule "magit"]
+	path = site-lisp/plugins/magit
 	url = https://github.com/magit/magit
-[submodule "plugins/with-editor"]
-	path = plugins/with-editor
+[submodule "with-editor"]
+	path = site-lisp/plugins/with-editor
 	url = https://github.com/magit/with-editor
-[submodule "plugins/transient"]
-	path = plugins/transient
+[submodule "transient"]
+	path = site-lisp/plugins/transient
 	url = https://github.com/magit/transient
-[submodule "plugins/aweshell"]
-	path = plugins/aweshell
+[submodule "aweshell"]
+	path = site-lisp/plugins/aweshell
 	url = https://github.com/manateelazycat/aweshell
-[submodule "plugins/annalist"]
-	path = plugins/annalist
+[submodule "annalist"]
+	path = site-lisp/plugins/annalist
 	url = https://github.com/noctuid/annalist.el
-[submodule "plugins/hydra"]
-	path = plugins/hydra
+[submodule "hydra"]
+	path = site-lisp/plugins/hydra
 	url = https://github.com/abo-abo/hydra
-[submodule "plugins/speed-type"]
-	path = plugins/speed-type
+[submodule "speed-type"]
+	path = site-lisp/plugins/speed-type
 	url = https://github.com/parkouss/speed-type
-[submodule "plugins/auto-save"]
-	path = plugins/auto-save
+[submodule "auto-save"]
+	path = site-lisp/plugins/auto-save
 	url = https://github.com/manateelazycat/auto-save
-[submodule "plugins/sdcv"]
-	path = plugins/sdcv
+[submodule "sdcv"]
+	path = site-lisp/plugins/sdcv
 	url = https://github.com/manateelazycat/sdcv
-[submodule "plugins/posframe"]
-	path = plugins/posframe
+[submodule "posframe"]
+	path = site-lisp/plugins/posframe
 	url = https://github.com/tumashu/posframe
-[submodule "plugins/youdao-dictionary"]
-	path = plugins/youdao-dictionary
+[submodule "youdao-dictionary"]
+	path = site-lisp/plugins/youdao-dictionary
 	url = https://github.com/xuchunyang/youdao-dictionary.el
-[submodule "plugins/pos-tip"]
-	path = plugins/pos-tip
+[submodule "pos-tip"]
+	path = site-lisp/plugins/pos-tip
 	url = https://github.com/pitkali/pos-tip
-[submodule "plugins/popup"]
-	path = plugins/popup
+[submodule "popup"]
+	path = site-lisp/plugins/popup
 	url = https://github.com/auto-complete/popup-el
-[submodule "plugins/chinese-word-at-point"]
-	path = plugins/chinese-word-at-point
+[submodule "chinese-word-at-point"]
+	path = site-lisp/plugins/chinese-word-at-point
 	url = https://github.com/xuchunyang/chinese-word-at-point.el
-[submodule "plugins/names"]
-	path = plugins/names
+[submodule "names"]
+	path = site-lisp/plugins/names
 	url = https://github.com/Malabarba/names
-[submodule "plugins/telega"]
-	path = plugins/telega
+[submodule "telega"]
+	path = site-lisp/plugins/telega
 	url = https://github.com/zevlg/telega.el/tree/releases
-[submodule "plugins/nox"]
-	path = plugins/nox
+[submodule "nox"]
+	path = site-lisp/plugins/nox
 	url = https://github.com/manateelazycat/nox
