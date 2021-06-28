@@ -71,9 +71,13 @@
 
 (setq make-backup-files nil)
 
+(setq auto-save-list-file-prefix nil)
+
 (setq default-directory "~/")
 
 (setq custom-file "~/.emacs.default/lisp/init-custom.el" )
+
+(setq recentf-save-file "~/.emacs.default/var/recentf")
 
 ;; Vertical Scroll
 (setq scroll-step 1)
