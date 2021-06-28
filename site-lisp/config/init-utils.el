@@ -51,6 +51,8 @@
 
 (setq-default c-default-style "linux")
 
+(setq auto-save-default nil)
+
 (setq make-backup-files nil)
 
 (setq visible-bell nil)

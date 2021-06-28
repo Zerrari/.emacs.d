@@ -113,6 +113,6 @@
 	    ;; (require 'magit)
 	    ))))
 
-(message (emacs-init-time))
+;; (message (emacs-init-time))
 
 ;;; init.el ends here
