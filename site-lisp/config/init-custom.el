@@ -3,7 +3,7 @@
 ;; Copyright (C) 2021  张逸仲
 
 ;; Author: 张逸仲 <zerrari@zhangyizhongdeMacBook-Pro.local>
-;; Keywords: 
+;; Keywords:
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -20,7 +20,7 @@
 
 ;;; Commentary:
 
-;; 
+;;
 
 ;;; Code:
 
@@ -33,8 +33,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages
-   '(evil-surround company hungry-delete ivy swiper counsel smartparens smex which-key use-package evil evil-leader evil-nerd-commenter key-chord markdown-mode markdown-toc exec-path-from-shell wakatime-mode all-the-icons all-the-icons-dired rainbow-delimiters diminish doom-themes ranger flycheck quickrun)))
+ '(safe-local-variable-values '((eval org-sbe "startup") (org-confirm-babel-evaluate))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

@@ -2,3 +2,4 @@
 .emacs.desktop.lock
 .mc-lists.el
 var
+transient

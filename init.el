@@ -99,6 +99,8 @@
 	    ;; (require 'init-smex)
 	    (require 'init-amx)
 
+        (require 'init-haskell)
+
 	    ;(require 'init-nox)
 
 	    (require 'init-icons)

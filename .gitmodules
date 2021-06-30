@@ -175,3 +175,12 @@
 [submodule "nox"]
 	path = site-lisp/plugins/nox
 	url = https://github.com/manateelazycat/nox
+[submodule "site-lisp/plugins/swift-mode"]
+	path = site-lisp/plugins/swift-mode
+	url = https://github.com/swift-emacs/swift-mode
+[submodule "site-lisp/plugins/haskell-mode"]
+	path = site-lisp/plugins/haskell-mode
+	url = https://github.com/haskell/haskell-mode
+[submodule "site-lisp/plugins/js2-mode"]
+	path = site-lisp/plugins/js2-mode
+	url = https://github.com/mooz/js2-mode

@@ -77,7 +77,7 @@
 
 (setq default-directory "~/")
 
-(setq custom-file "~/.emacs.default/lisp/init-custom.el" )
+(setq custom-file "~/.emacs.default/site-lisp/config/init-custom.el" )
 
 (setq recentf-save-file "~/.emacs.default/var/recentf")
 
