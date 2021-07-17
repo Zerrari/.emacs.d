@@ -184,3 +184,15 @@
 [submodule "site-lisp/plugins/js2-mode"]
 	path = site-lisp/plugins/js2-mode
 	url = https://github.com/mooz/js2-mode
+[submodule "site-lisp/plugins/citre"]
+	path = site-lisp/plugins/citre
+	url = https://github.com/universal-ctags/citre
+[submodule "site-lisp/plugins/goggles"]
+	path = site-lisp/plugins/goggles
+	url = https://github.com/minad/goggles
+[submodule "site-lisp/plugins/anki-editor"]
+	path = site-lisp/plugins/anki-editor
+	url = https://github.com/louietan/anki-editor
+[submodule "site-lisp/plugins/request"]
+	path = site-lisp/plugins/request
+	url = https://github.com/tkf/emacs-request
