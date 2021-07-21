@@ -206,7 +206,12 @@
   "Modular tray bar."
   :group 'awesome-tray)
 
-(defcustom awesome-tray-mode-line-active-color "DarkRed"
+;; (defcustom awesome-tray-mode-line-active-color "DarkRed"
+;;   "Active color."
+;;   :type 'string
+;;   :group 'awesome-tray)
+
+(defcustom awesome-tray-mode-line-active-color "#2832cc"
   "Active color."
   :type 'string
   :group 'awesome-tray)
@@ -355,9 +360,9 @@ These goes before those shown in their full names."
 
 (defface awesome-tray-module-buffer-name-face
   '((((background light))
-     :foreground "#cc7700" :bold t)
+     :foreground "#0061cc" :bold t)
     (t
-     :foreground "#ff9500" :bold t))
+     :foreground "#007aff" :bold t))
   "Buffer name face."
   :group 'awesome-tray)
 

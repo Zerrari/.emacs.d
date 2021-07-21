@@ -1,12 +1,12 @@
-(setq evil-want-integration t) 
+(setq evil-want-integration t)
 (setq evil-want-keybinding nil)
-(setq evil-want-integration t) 
+(setq evil-want-integration t)
 (setq evil-want-keybinding nil)
 (require 'evil)
 (require 'evil-nerd-commenter)
 (require 'key-chord)
-;(when (require 'evil-collection nil t)
-  ;(evil-collection-init))
+(when (require 'evil-collection nil t)
+  (evil-collection-init))
 
 (evil-mode 1)
 

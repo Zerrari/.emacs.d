@@ -196,3 +196,30 @@
 [submodule "site-lisp/plugins/request"]
 	path = site-lisp/plugins/request
 	url = https://github.com/tkf/emacs-request
+[submodule "site-lisp/plugins/restart-emacs"]
+	path = site-lisp/plugins/restart-emacs
+	url = https://github.com/iqbalansari/restart-emacs
+[submodule "site-lisp/plugins/lsp-mode"]
+	path = site-lisp/plugins/lsp-mode
+	url = https://github.com/emacs-lsp/lsp-mode
+[submodule "site-lisp/plugins/f"]
+	path = site-lisp/plugins/f
+	url = https://github.com/rejeep/f.el
+[submodule "site-lisp/plugins/ht"]
+	path = site-lisp/plugins/ht
+	url = https://github.com/Wilfred/ht.el
+[submodule "site-lisp/plugins/eglot"]
+	path = site-lisp/plugins/eglot
+	url = https://github.com/joaotavora/eglot
+[submodule "site-lisp/plugins/lsp-jedi"]
+	path = site-lisp/plugins/lsp-jedi
+	url = https://github.com/fredcamps/lsp-jedi
+[submodule "site-lisp/plugins/emacs-ccls"]
+	path = site-lisp/plugins/emacs-ccls
+	url = https://github.com/MaskRay/emacs-ccls
+[submodule "site-lisp/plugins/powerline"]
+	path = site-lisp/plugins/powerline
+	url = https://github.com/milkypostman/powerline
+[submodule "site-lisp/plugins/rainbow-mode"]
+	path = site-lisp/plugins/rainbow-mode
+	url = https://github.com/emacsmirror/rainbow-mode

@@ -33,7 +33,8 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(safe-local-variable-values '((eval org-sbe "startup") (org-confirm-babel-evaluate))))
+ '(custom-safe-themes
+   '("f302eb9c73ead648aecdc1236952b1ceb02a3e7fcd064073fb391c840ef84bca" default)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

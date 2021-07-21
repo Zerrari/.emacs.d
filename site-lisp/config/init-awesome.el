@@ -10,6 +10,10 @@
 
 (setq awesome-tray-active-modules nil)
 
-(add-to-list 'awesome-tray-active-modules "buffer-name" "date")
+(add-to-list 'awesome-tray-active-modules "buffer-name")
+
+;; (setq awesome-tray-mode-line-active-color "#2fff2f")
+
+(setq awesome-tray-mode-line-colors "#2fff2f")
 
 (provide 'init-awesome)

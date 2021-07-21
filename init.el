@@ -82,11 +82,18 @@
 
 	(require 'init-keymap)
 
+	(require 'init-lsp)
+	;; (require 'init-eglot)
+
 	;; 可以延后加载的
 	(run-with-idle-timer
 	1 nil
 	#'(lambda ()
+        (require 'anki-editor)
 	    (require 'init-company)
+	    (require 'goggles)
+	    ;; (require 'init-citre)
+	    ;; (require 'pulse)
 	    (require 'init-swiper)
 	    ;; (require 'init-snails)
 	    ;; (require 'init-whichkey)

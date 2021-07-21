@@ -9,7 +9,7 @@
 ;;     (save-excursion (insert " suffix"))
 ;;     (let ((left (point))
 ;;           (old-last-url google-this--last-url)
-;;           right)      
+;;           right)
 ;;       (insert "imdb raiders")
 ;;       (setq right (point))
 ;;       (noflet ((region-active-p () t)
@@ -50,8 +50,8 @@
   (let ((google-this-wrap-in-quotes nil))
     (noflet ((browse-url (url) url)
               (google-this-pick-term (_) gtt--test-string))
-      (should (equal 
-                (google-this-search nil "foo *%s& url Tester") 
+      (should (equal
+                (google-this-search nil "foo *%s& url Tester")
                 (format "foo *%s& url Tester" (url-hexify-string gtt--test-string)))))))
 
 ;;; Other google-this-something tests
@@ -74,6 +74,4 @@
         (should (equal (google-this-word nil) (gtt--format-and-hexify "doing")))
         (should (equal (google-this-symbol nil) (gtt--format-and-hexify "doing")))))))
 
-;;; Local Variables:
-;;; lisp-indent-function:common-lisp-indent-function
 ;;; End:

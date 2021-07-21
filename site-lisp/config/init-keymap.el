@@ -21,10 +21,11 @@ _l_: forward       _h_: backward        _j_: next       _k_: previous
 (general-evil-setup)
 
 (general-define-key
-    :states 'normal
+    :states '(normal visual emacs motion)
     :prefix "SPC"
-    :keymaps 'override
+    :keymaps '(override messages-buffer-mode-map)
     "a" 'hydra-awesometab/body
+    "q" 'hydra-quit/body
     "b" 'hydra-buffers/body
     "c" 'hydra-comments/body
     "f" 'hydra-files/body
@@ -34,6 +35,10 @@ _l_: forward       _h_: backward        _j_: next       _k_: previous
 
 (defhydra hydra-awesometab (:hint nil
 			    :idle 2
+			    :pre (progn
+				   (set-cursor-color "#40e0d0")
+				   (message "Awesometab Mode"))
+			    :post (set-cursor-color "#ffffff")
 			    :exit t)
 "
 ---------------------------------------------------------------------------------
@@ -54,22 +59,32 @@ _g_: switch group    _h_: tab jump
 
 (defhydra hydra-buffers (:hint nil
 			 :idle 2
+			    :pre (progn
+				   (set-cursor-color "#40e0d0")
+				   (message "Buffers Mode"))
+			    :post (set-cursor-color "#ffffff")
 			 :exit t)
 "
 ----------------------------------------------------------------------------------
                                    Buffers
-_k_: kill buffer and window    _e_: eval buffer   _b_: switch buffer
-_p_: previous buffer           _w_: save buffers  _q_: save buffers and kill Emacs
+_k_: kill buffer and window    _e_: eval buffer     _b_: switch buffer
+_d_: kill buffer and window    _p_: previous buffer _s_: save buffers
 "
     ("k" kill-buffer-and-window)
+    ("d" kill-buffer-and-window)
     ("e" eval-buffer)
     ("b" ivy-switch-buffer)
     ("p" change-previous-buffer)
-    ("w" quick-save-buffers)
-    ("q" save-buffers-kill-emacs))
+    ("s" quick-save-buffers)
+    ("q" nil "quit"))
 
 (defhydra hydra-comments (:exit t
 		          :idle 2
+			 :pre (progn
+				(set-cursor-color "#40e0d0")
+				(message "Comments Mode"))
+
+			    :post (set-cursor-color "#ffffff")
 			  :hint nil)
 "
 -------------------------------------------------------------
@@ -83,6 +98,10 @@ _l_: comment or uncomment lines
 
 (defhydra hydra-files (:hint nil
 		       :idle 2
+		       :pre (progn
+			    (set-cursor-color "#40e0d0")
+			    (message "Files Mode"))
+			    :post (set-cursor-color "#ffffff")
 		       :exit t)
 "
 -------------------------------------------------------------
@@ -91,22 +110,46 @@ _d_: delete file    _f_: quick file jump    _r_: rename file
 _s_: load config
 "
     ("d" delete-this-file)
-    ("f" quick-file-jump)
+    ("f" find-file)
+    ("o" quick-open-my-config)
+    ("j" quick-file-jump)
     ("r" rename-this-file-and-buffer)
     ("s" quick-load-init-file)
     ("q" nil "quit"))
 
-(defhydra hydra-windows (:hint nil
-			 :idle 2
+(defhydra hydra-quit (:hint nil
+			    :idle 2
+		       :pre (progn
+			    (set-cursor-color "#40e0d0")
+			    (message "Quit Mode"))
+			    :post (set-cursor-color "#ffffff")
 			 :exit t)
 "
 -------------------------------------------------------------
                            Windows
-_k_: delete window    _s_: spilt window right    _o_: other window
-_s_: load config
+_r_: restart Emacs    _q_: save and quit Emacs    _Q_: quit Emacs
+"
+    ("r" restart-emacs)
+    ("q" save-buffers-kill-emacs)
+    ("Q" kill-emacs))
+
+(defhydra hydra-windows (:hint nil
+			 :idle 2
+			 :pre (progn
+				(set-cursor-color "#40e0d0")
+				(message "Windows Mode"))
+			 :post (set-cursor-color "#ffffff")
+			 :exit t)
+"
+-------------------------------------------------------------
+                           Windows
+_k_: kill window    _r_: split window right    _o_: other window
+_d_: delete window  _d_: split window below
 "
     ("k" delete-window)
-    ("s" split-window-right)
+    ("d" delete-window)
+    ("r" split-window-right)
+    ("d" split-window-below)
     ("o" other-window)
     ("q" nil "quit"))
 

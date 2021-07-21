@@ -1,5 +1,5 @@
 (require 'doom-themes)
 
-(load-theme 'doom-one t)
+(load-theme 'doom-dark+ t)
 
 (provide 'init-themes)

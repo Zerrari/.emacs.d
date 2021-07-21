@@ -3,7 +3,7 @@
 ;; Copyright (C) 2021  zerrari
 
 ;; Author: zerrari <zerrari@zhangyizhongdeMacBook-Pro.local>
-;; Keywords: 
+;; Keywords:
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -20,9 +20,12 @@
 
 ;;; Commentary:
 
-;; 
+;;
 
 ;;; Code:
+
+;; (require 'powerline)
+
 
 (setq ring-bell-function 'ignore blink-cursor-mode nil)
 
@@ -42,6 +45,8 @@
 
 ;; set fullscreen
 (setq initial-frame-alist (quote((fullscreen . maximized))))
+
+;; (powerline-vim-theme)
 
 (provide 'init-ui)
 

@@ -28,9 +28,13 @@
 ;; (require 'highlight-indent-guides)
 (require 'rainbow-delimiters)
 (require 'hungry-delete)
+(require 'restart-emacs)
+(require 'rainbow-mode)
 ;(require 'format-all)
 
 (indent-guide-global-mode)
+
+(rainbow-mode)
 
 ;; (add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
 
@@ -62,6 +66,8 @@
 (setq split-width-threshold 0)
 
 (fset 'yes-or-no-p 'y-or-n-p)
+
+(auto-insert-mode 1)
 
 (global-hl-line-mode 1)
 
@@ -153,20 +159,20 @@
   (forward-line -2)
 )
 
-(add-hook 'c-mode-hook
-    (lambda ()
-	(if (= (buffer-size) 0)
-	    (progn
-		(newc)
-		(message "load a c template!")))))
+;; (add-hook 'c-mode-hook
+;;     (lambda ()
+;; 	(if (= (buffer-size) 0)
+;; 	    (progn
+;; 		(newc)
+;; 		(message "load a c template!")))))
 
 
-(add-hook 'c++-mode-hook
-    (lambda ()
-	(if (= (buffer-size) 0)
-	    (progn
-		(newcpp)
-		(message "load a cpp template!")))))
+;; (add-hook 'c++-mode-hook
+;;     (lambda ()
+;; 	(if (= (buffer-size) 0)
+;; 	    (progn
+;; 		(newcpp)
+;; 		(message "load a cpp template!")))))
 
 ;; show matching
 (add-hook 'emacs-lisp-mode-hook 'show-paren-mode)
@@ -277,6 +283,11 @@ end-of-buffer signals; pass the rest to the default handler."
     (command-error-default-function data context caller)))
 
 (setq command-error-function #'my-command-error-function)
+
+(defun quick-open-my-config()
+  (interactive)
+  (counsel-find-file "~/.emacs.default/site-lisp/config"))
+
 
 (provide 'init-utils)
 

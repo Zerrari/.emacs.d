@@ -3,3 +3,7 @@
 .mc-lists.el
 var
 transient
+.cache
+.lsp-session-v1
+smex-items
+request
