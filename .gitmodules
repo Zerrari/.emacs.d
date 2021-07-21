@@ -223,3 +223,6 @@
 [submodule "site-lisp/plugins/rainbow-mode"]
 	path = site-lisp/plugins/rainbow-mode
 	url = https://github.com/emacsmirror/rainbow-mode
+[submodule "site-lisp/plugins/awesometray"]
+	path = site-lisp/plugins/awesometray
+	url = https://github.com/zerrari/awesome-tray
