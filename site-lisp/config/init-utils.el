@@ -288,6 +288,11 @@ end-of-buffer signals; pass the rest to the default handler."
   (interactive)
   (counsel-find-file "~/.emacs.default/site-lisp/config"))
 
+(defun save-and-restart-emacs ()
+  (interactive)
+  (quick-save-buffers)
+  (restart-emacs))
+
 
 (provide 'init-utils)
 

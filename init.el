@@ -39,6 +39,8 @@
     (defvar zerrari-emacs-config-dir (concat zerrari-emacs-root-dir "/config"))
     (defvar zerrari-emacs-plugin-dir (concat zerrari-emacs-root-dir "/plugins"))
 
+    (setq user-full-name "zerrari")
+
     ;; Add plugins dir with its subdirs
     (let ((default-directory  zerrari-emacs-plugin-dir))
 		(normal-top-level-add-subdirs-to-load-path))
@@ -77,21 +79,21 @@
 	(require 'init-evil)
 	(require 'init-awesome)
 
+	(require 'init-keymap)
 	;; (require 'init-functions)
 	;; (require 'init-packages)
 
-	(require 'init-keymap)
 
-	(require 'init-lsp)
+	;; (require 'init-lsp)
 	;; (require 'init-eglot)
 
 	;; 可以延后加载的
 	(run-with-idle-timer
 	1 nil
 	#'(lambda ()
-        (require 'anki-editor)
+	    ;; (require 'anki-editor)
 	    (require 'init-company)
-	    (require 'goggles)
+	    ;; (require 'goggles)
 	    ;; (require 'init-citre)
 	    ;; (require 'pulse)
 	    (require 'init-swiper)
@@ -106,13 +108,13 @@
 	    ;; (require 'init-smex)
 	    (require 'init-amx)
 
-        (require 'init-haskell)
+	    ;; (require 'init-haskell)
 
-	    ;(require 'init-nox)
+	    ;; (require 'init-nox)
 
 	    (require 'init-icons)
-	    (require 'init-shell)
-	    (require 'init-youdao)
+	    ;; (require 'init-shell)
+	    ;; (require 'init-youdao)
 	    ;; (require 'telega)
 	    ;; (require 'init-arduino)
 	    ;; (require 'init-sdcv)
@@ -122,6 +124,6 @@
 	    ;; (require 'magit)
 	    ))))
 
-;; (message (emacs-init-time))
+;; (message-box (concat "Emacs loads in " (emacs-init-time)))
 
 ;;; init.el ends here

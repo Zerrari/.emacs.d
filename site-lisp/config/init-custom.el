@@ -1,8 +1,8 @@
 ;;; init-custom.el ---                               -*- lexical-binding: t; -*-
 
-;; Copyright (C) 2021  张逸仲
+;; Copyright (C) 2021  zerrari
 
-;; Author: 张逸仲 <zerrari@zhangyizhongdeMacBook-Pro.local>
+;; Author: zerrari <zerrari@zhangyizhongdeMacBook-Pro.local>
 ;; Keywords:
 
 ;; This program is free software; you can redistribute it and/or modify
@@ -24,20 +24,5 @@
 
 ;;; Code:
 
-
-
 (provide 'init-custom)
 ;;; init-custom.el ends here
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(custom-safe-themes
-   '("f302eb9c73ead648aecdc1236952b1ceb02a3e7fcd064073fb391c840ef84bca" default)))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )

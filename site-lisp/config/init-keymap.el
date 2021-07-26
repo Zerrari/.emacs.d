@@ -1,3 +1,29 @@
+;;; init-keymap.el --- Keymap Configuration          -*- lexical-binding: t; -*-
+
+;; Copyright (C) 2021  zerrari
+
+;; Author: zerrari <zerrari@zhangyizhongdeMacBook-Pro.local>
+;; Keywords: lisp
+
+;; This program is free software; you can redistribute it and/or modify
+;; it under the terms of the GNU General Public License as published by
+;; the Free Software Foundation, either version 3 of the License, or
+;; (at your option) any later version.
+
+;; This program is distributed in the hope that it will be useful,
+;; but WITHOUT ANY WARRANTY; without even the implied warranty of
+;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+;; GNU General Public License for more details.
+
+;; You should have received a copy of the GNU General Public License
+;; along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+;;; Commentary:
+
+;;
+
+;;; Code:
+
 (require 'general)
 (require 'hydra)
 
@@ -18,20 +44,25 @@ _l_: forward       _h_: backward        _j_: next       _k_: previous
   ("q" nil "quit"))
 
 
-(general-evil-setup)
+(with-eval-after-load "general"
+    (general-evil-setup)
 
-(general-define-key
-    :states '(normal visual emacs motion)
-    :prefix "SPC"
-    :keymaps '(override messages-buffer-mode-map)
-    "a" 'hydra-awesometab/body
-    "q" 'hydra-quit/body
-    "b" 'hydra-buffers/body
-    "c" 'hydra-comments/body
-    "f" 'hydra-files/body
-    "w" 'hydra-windows/body
-    "y" 'hydra-youdao/body
-    "r" 'quickrun)
+    (general-define-key
+	:states '(normal visual emacs motion)
+	:prefix "SPC"
+	:keymaps '(override messages-buffer-mode-map)
+	"a" 'hydra-awesometab/body
+	"q" 'hydra-quit/body
+	"b" 'hydra-buffers/body
+	"c" 'hydra-comments/body
+	"h" 'hydra-help/body
+	"f" 'hydra-files/body
+	"w" 'hydra-windows/body
+	"y" 'hydra-youdao/body
+	"SPC" 'execute-extended-command
+	"r" 'quickrun))
+
+
 
 (defhydra hydra-awesometab (:hint nil
 			    :idle 2
@@ -90,11 +121,31 @@ _d_: kill buffer and window    _p_: previous buffer _s_: save buffers
 -------------------------------------------------------------
                            Comments
 _r_: comment or uncomment region
-_l_: comment or uncomment lines
+_c_: comment or uncomment lines
 "
   ("r" comment-or-uncomment-region)
-  ("l" evilnc-comment-or-uncomment-lines)
+  ("c" evilnc-comment-or-uncomment-lines)
   ("q" nil "quit"))
+
+(defhydra hydra-help (:hint nil
+		       :idle 2
+		       :pre (progn
+			    (set-cursor-color "#40e0d0")
+			    (message "Help Mode"))
+			    :post (set-cursor-color "#ffffff")
+		       :exit t)
+"
+-------------------------------------------------------------
+                           Help
+_f_: function     _k_: key    _v_: variable
+_i_: Emacs info
+"
+    ("f" describe-function)
+    ("k" describe-key)
+    ("v" describe-variable)
+    ("i" info)
+    ("q" nil "quit"))
+
 
 (defhydra hydra-files (:hint nil
 		       :idle 2
@@ -106,8 +157,8 @@ _l_: comment or uncomment lines
 "
 -------------------------------------------------------------
                            Files
-_d_: delete file    _f_: quick file jump    _r_: rename file
-_s_: load config
+_d_: delete file    _f_: find file          _r_: rename file
+_s_: load config    _j_: quick file jump    _o_: open config
 "
     ("d" delete-this-file)
     ("f" find-file)
@@ -129,7 +180,7 @@ _s_: load config
                            Windows
 _r_: restart Emacs    _q_: save and quit Emacs    _Q_: quit Emacs
 "
-    ("r" restart-emacs)
+    ("r" save-and-restart-emacs)
     ("q" save-buffers-kill-emacs)
     ("Q" kill-emacs))
 
@@ -204,5 +255,5 @@ _a_: search at point    _s_: search from input     _o_: posframe
 ;;     "g" 'awesome-tab-switch-group
 ;;     "h" 'awesome-tab-ace-jump)
 
-
 (provide 'init-keymap)
+;;; init-keymap.el ends here
