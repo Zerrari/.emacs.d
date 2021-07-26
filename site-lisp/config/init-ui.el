@@ -46,6 +46,10 @@
 ;; set fullscreen
 (setq initial-frame-alist (quote((fullscreen . maximized))))
 
+;; alpha
+(set-frame-parameter (selected-frame) 'alpha '(85 . 50))
+(add-to-list 'default-frame-alist '(alpha . (85 . 50)))
+
 ;; (powerline-vim-theme)
 
 (provide 'init-ui)
