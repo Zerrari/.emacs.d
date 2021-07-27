@@ -25,13 +25,12 @@
 ;;; Code:
 
 (require 'lsp-mode)
+(require 'lsp-ui)
 (require 'lsp-jedi)
-(require 'ccls)
+;; (require 'ccls)
 
-;; (add-to-list 'lsp-enabled-clients 'jedi)
-(add-to-list 'lsp-enabled-clients 'ccls)
-
-(setq ccls-executable "/usr/local/bin/ccls")
+(add-to-list 'lsp-enabled-clients 'jedi)
+(add-to-list 'lsp-enabled-clients 'clangd)
 
 (provide 'init-lsp)
 ;;; init-lsp.el ends here

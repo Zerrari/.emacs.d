@@ -84,7 +84,7 @@
 	;; (require 'init-packages)
 
 
-	;; (require 'init-lsp)
+	(require 'init-lsp)
 	;; (require 'init-eglot)
 
 	;; 可以延后加载的
