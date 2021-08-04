@@ -106,7 +106,7 @@
 	    (require 'init-smartparens)
 
 	    ;; (require 'init-smex)
-	    (require 'init-amx)
+	    ;; (require 'init-amx)
 
 	    ;; (require 'init-haskell)
 

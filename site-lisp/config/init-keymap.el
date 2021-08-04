@@ -57,9 +57,10 @@ _l_: forward       _h_: backward        _j_: next       _k_: previous
 	"c" 'hydra-comments/body
 	"h" 'hydra-help/body
 	"f" 'hydra-files/body
+	"u" 'hydra-ui/body
 	"w" 'hydra-windows/body
 	"y" 'hydra-youdao/body
-	"SPC" 'execute-extended-command
+	"SPC" 'counsel-M-x
 	"r" 'quickrun))
 
 
@@ -109,6 +110,22 @@ _d_: kill buffer and window    _p_: previous buffer _s_: save buffers
     ("s" quick-save-buffers)
     ("q" nil "quit"))
 
+(defhydra hydra-ui (:hint nil
+			 :idle 2
+			    :pre (progn
+				   (set-cursor-color "#40e0d0")
+				   (message "UI Mode"))
+			    :post (set-cursor-color "#ffffff")
+			 :exit t)
+"
+----------------------------------------------------------------------------------
+                                   UI
+_i_: increase font size    _d_: decrease font size
+"
+    ("i" increase-font-size)
+    ("d" decrease-font-size)
+    ("q" nil "quit"))
+
 (defhydra hydra-comments (:exit t
 		          :idle 2
 			 :pre (progn
@@ -140,9 +157,9 @@ _c_: comment or uncomment lines
 _f_: function     _k_: key    _v_: variable
 _i_: Emacs info
 "
-    ("f" describe-function)
+    ("f" counsel-describe-function)
     ("k" describe-key)
-    ("v" describe-variable)
+    ("v" counsel-describe-variable)
     ("i" info)
     ("q" nil "quit"))
 
@@ -158,11 +175,11 @@ _i_: Emacs info
 -------------------------------------------------------------
                            Files
 _d_: delete file    _f_: find file          _r_: rename file
-_s_: load config    _j_: quick file jump    _o_: open config
+_s_: load config    _j_: quick file jump    _p_: open config
 "
     ("d" delete-this-file)
     ("f" find-file)
-    ("o" quick-open-my-config)
+    ("p" quick-open-my-config)
     ("j" quick-file-jump)
     ("r" rename-this-file-and-buffer)
     ("s" quick-load-init-file)
@@ -177,7 +194,7 @@ _s_: load config    _j_: quick file jump    _o_: open config
 			 :exit t)
 "
 -------------------------------------------------------------
-                           Windows
+                           Quit
 _r_: restart Emacs    _q_: save and quit Emacs    _Q_: quit Emacs
 "
     ("r" save-and-restart-emacs)

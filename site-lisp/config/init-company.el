@@ -45,10 +45,13 @@
     (set (make-local-variable 'company-backends) '(company-elisp company-dabbrev company-files))))
 (add-hook 'c-mode-hook
     (lambda ()
-    (set (make-local-variable 'company-backends) '(company-dabbrev company-files))))
+    (set (make-local-variable 'company-backends) '(company-dabbrev company-files company-capf))))
 (add-hook 'c++-mode-hook
     (lambda ()
-    (set (make-local-variable 'company-backends) '(company-dabbrev company-files))))
+    (set (make-local-variable 'company-backends) '(company-dabbrev company-files compnay-capf))))
+(add-hook 'python-mode-hook
+    (lambda ()
+    (set (make-local-variable 'company-backends) '(company-dabbrev company-files company-capf))))
 
 (provide 'init-company)
 ;;; init-company.el ends here

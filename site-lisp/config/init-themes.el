@@ -26,7 +26,7 @@
 
 (require 'doom-themes)
 
-(load-theme 'doom-zenburn t)
+(load-theme 'doom-molokai t)
 
 (provide 'init-themes)
 ;;; init-themes.el ends here

@@ -7,3 +7,5 @@ transient
 .lsp-session-v1
 smex-items
 request
+url
+timelog

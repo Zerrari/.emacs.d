@@ -75,6 +75,7 @@
 (define-key evil-normal-state-map (kbd "H") 'goto-line-beginning)
 (define-key evil-normal-state-map (kbd "L") 'goto-line-end)
 (key-chord-define evil-insert-state-map "jj" 'evil-normal-state)
+;; (key-chord-define evil-visual-state-map "jj" 'evil-normal-state)
 
 (provide 'init-evil)
 ;;; init-evil.el ends here

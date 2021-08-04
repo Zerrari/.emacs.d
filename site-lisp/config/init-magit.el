@@ -1,9 +1,9 @@
-;;; init-ui.el ---                                  -*- lexical-binding: t; -*-
+;;; init-magit.el --- magit                          -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2021  zerrari
 
 ;; Author: zerrari <zerrari@zhangyizhongdeMacBook-Pro.local>
-;; Keywords:
+;; Keywords: lisp
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -24,34 +24,8 @@
 
 ;;; Code:
 
-;; (require 'powerline)
+(require 'magit)
 
 
-(setq ring-bell-function 'ignore blink-cursor-mode nil)
-
-(set-face-attribute 'default nil :font "monaco 24")
-
-;; shut down auto-save mode
-(auto-save-mode -1)
-
-;; set line number
-(global-linum-mode 1)
-
-;; set cursor type
-(setq-default cursor-type 'bar)
-
-;; skip welcome page
-(setq inhibit-splash-screen 1)
-
-;; set fullscreen
-(setq initial-frame-alist (quote((fullscreen . maximized))))
-
-;; alpha
-;; (set-frame-parameter (selected-frame) 'alpha '(100 . 50))
-;; (add-to-list 'default-frame-alist '(alpha . (100 . 50)))
-
-;; (powerline-vim-theme)
-
-(provide 'init-ui)
-
-;;; init-ui.el ends here
+(provide 'init-magit)
+;;; init-magit.el ends here

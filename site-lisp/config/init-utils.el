@@ -293,6 +293,14 @@ end-of-buffer signals; pass the rest to the default handler."
   (quick-save-buffers)
   (restart-emacs))
 
+(defun increase-font-size ()
+  (interactive)
+  (text-scale-increase 0.5))
+
+(defun decrease-font-size ()
+  (interactive)
+  (text-scale-decrease 0.5))
+
 
 (provide 'init-utils)
 
