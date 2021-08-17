@@ -226,3 +226,9 @@
 [submodule "site-lisp/plugins/lsp-ui"]
 	path = site-lisp/plugins/lsp-ui
 	url = https://github.com/emacs-lsp/lsp-ui
+[submodule "site-lisp/plugins/latex-preview-pane"]
+	path = site-lisp/plugins/latex-preview-pane
+	url = https://github.com/jsinglet/latex-preview-pane
+[submodule "site-lisp/plugins/command-log-mode"]
+	path = site-lisp/plugins/command-log-mode
+	url = https://github.com/lewang/command-log-mode

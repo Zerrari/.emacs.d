@@ -26,6 +26,7 @@
 
 (require 'general)
 (require 'hydra)
+(require 'command-log-mode)
 
 (defhydra hydra-vi (:hint nil
 		    :pre (set-cursor-color "#40e0d0")

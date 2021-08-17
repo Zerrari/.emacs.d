@@ -1,0 +1,243 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.8.11)  11 AUG 2021 19:33
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**\nonstopmode \input{preview.drv}
+(./preview.drv
+(/usr/local/texlive/2021basic/texmf-dist/tex/latex/base/ltxdoc.cls
+Document Class: ltxdoc 2020/10/04 v2.1b Standard LaTeX documentation class
+(/usr/local/texlive/2021basic/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2020/04/10 v1.4m Standard LaTeX document class
+(/usr/local/texlive/2021basic/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
+)
+\c@part=\count179
+\c@section=\count180
+\c@subsection=\count181
+\c@subsubsection=\count182
+\c@paragraph=\count183
+\c@subparagraph=\count184
+\c@figure=\count185
+\c@table=\count186
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen138
+)
+(/usr/local/texlive/2021basic/texmf-dist/tex/latex/base/doc.sty
+Package: doc 2020/06/15 v2.1m Standard LaTeX documentation package (FMi)
+\c@StandardModuleDepth=\count187
+\guard@level=\count188
+\MacrocodeTopsep=\skip49
+\MacroIndent=\dimen139
+\macro@cnt=\count189
+\MacroTopsep=\skip50
+\index@excludelist=\toks15
+
+(/usr/local/texlive/2021basic/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2019/12/09 v1.8y multicolumn formatting (FMi)
+\c@tracingmulticols=\count190
+\mult@box=\box47
+\multicol@leftmargin=\dimen140
+\c@unbalance=\count191
+\c@collectmore=\count192
+\doublecol@number=\count193
+\multicoltolerance=\count194
+\multicolpretolerance=\count195
+\full@width=\dimen141
+\page@free=\dimen142
+\premulticols=\dimen143
+\postmulticols=\dimen144
+\multicolsep=\skip51
+\multicolbaselineskip=\skip52
+\partial@page=\box48
+\last@line=\box49
+\maxbalancingoverflow=\dimen145
+\mult@rightbox=\box50
+\mult@grightbox=\box51
+\mult@gfirstbox=\box52
+\mult@firstbox=\box53
+\@tempa=\box54
+\@tempa=\box55
+\@tempa=\box56
+\@tempa=\box57
+\@tempa=\box58
+\@tempa=\box59
+\@tempa=\box60
+\@tempa=\box61
+\@tempa=\box62
+\@tempa=\box63
+\@tempa=\box64
+\@tempa=\box65
+\@tempa=\box66
+\@tempa=\box67
+\@tempa=\box68
+\@tempa=\box69
+\@tempa=\box70
+\@tempa=\box71
+\@tempa=\box72
+\@tempa=\box73
+\@tempa=\box74
+\@tempa=\box75
+\@tempa=\box76
+\@tempa=\box77
+\@tempa=\box78
+\@tempa=\box79
+\@tempa=\box80
+\@tempa=\box81
+\@tempa=\box82
+\@tempa=\box83
+\@tempa=\box84
+\@tempa=\box85
+\@tempa=\box86
+\@tempa=\box87
+\@tempa=\box88
+\@tempa=\box89
+\@tempa=\box90
+\c@minrows=\count196
+\c@columnbadness=\count197
+\c@finalcolumnbadness=\count198
+\last@try=\dimen146
+\multicolovershoot=\dimen147
+\multicolundershoot=\dimen148
+\mult@nat@firstbox=\box91
+\colbreak@box=\box92
+\mc@col@check@num=\count199
+)
+\IndexMin=\dimen149
+\c@IndexColumns=\count266
+\GlossaryMin=\dimen150
+\c@GlossaryColumns=\count267
+\check@sum=\count268
+\bslash@cnt=\count269
+\wrong@table=\toks16
+\c@CodelineNo=\count270
+))
+(./preview.sty
+Package: preview 2017/04/24 12.3 (AUCTeX/preview-latex)
+)
+(/usr/local/texlive/2021basic/texmf-dist/tex/latex/l3backend/l3backend-pdftex.d
+ef
+File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count271
+\l__pdf_internal_box=\box93
+) (./preview.aux)
+\openout1 = `preview.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+Package doc Info: Made | a short reference for \verb on input line 29.
+ (./preview.dtx
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <17.28> on input line 28.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 28.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 28.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 28.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 28.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 31.
+
+Overfull \hbox (2.944pt too wide) in paragraph at lines 42--51
+\OT1/cmr/m/n/10 good al-ter-na-tive: Peo-ple make do by fid-dling around with [
+]\OT1/cmtt/m/n/10 \thispagestyle{empty}
+ []
+
+[1
+
+{/usr/local/texlive/2021basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 90.
+
+[2]
+Overfull \hbox (6.0296pt too wide) in paragraph at lines 152--154
+[][]\OT1/cmtt/m/n/10 latex '\RequirePackage[active,delayed,$\OMS/cmsy/m/n/10 h$
+[]\OT1/cmr/m/it/10 options$\OMS/cmsy/m/n/10 i$[][]\OT1/cmtt/m/n/10 ]{preview}
+ []
+
+[3] [4] [5] [6] [7]
+
+LaTeX Warning: Marginpar on page 8 moved.
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <9> on input line 451.
+[8]
+Overfull \hbox (0.58882pt too wide) in paragraph at lines 527--527
+ [][]  \OT1/cmtt/m/sl/9 \long\def\pr@advise@ship#1#2#3{\pr@advise#1{\pr@protect
+@ship{#2}{#3}}}% 
+ []
+
+[9] [10] [11] [12] [13] [14] [15] [16] [17]
+Overfull \hbox (0.58882pt too wide) in paragraph at lines 1095--1095
+ [][]    \OT1/cmtt/m/sl/9 \noexpand\pr@advise@ship{##2}{\the\toks@{##1\noexpand
+\pr@endbox}}{}}% 
+ []
+
+[18] [19] [20]
+Overfull \hbox (5.31378pt too wide) in paragraph at lines 1309--1309
+ [][]      \OT1/cmtt/m/sl/9 % FIXME: The message should not be emitted if XeTeX
+ does not produce 
+ []
+
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <12> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 1320.
+
+[21] [22] [23] [24] [25] [26] [27] [28] [29] [30]
+*******************
+* Checksum passed *
+*******************
+) [31] (./preview.aux) ) 
+Here is how much of TeX's memory you used:
+ 923 strings out of 480445
+ 14002 string characters out of 5892391
+ 311428 words of memory out of 5000000
+ 18238 multiletter control sequences out of 15000+600000
+ 412606 words of font info for 60 fonts, out of 8000000 for 9000
+ 319 hyphenation exceptions out of 8191
+ 72i,9n,77p,252b,447s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2021basic/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2021basic/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2021basic/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/2021basic/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2021basic/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmitt10.pfb></usr/local/texlive/2021basic/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2021basi
+c/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2021b
+asic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/20
+21basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive
+/2021basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texl
+ive/2021basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/te
+xlive/2021basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/
+texlive/2021basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsltt10.pfb></usr/
+local/texlive/2021basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></u
+sr/local/texlive/2021basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
+></usr/local/texlive/2021basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.
+pfb></usr/local/texlive/2021basic/texmf-dist/fonts/type1/public/amsfonts/cm/cms
+y8.pfb></usr/local/texlive/2021basic/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmsy9.pfb></usr/local/texlive/2021basic/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmti10.pfb></usr/local/texlive/2021basic/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmtt10.pfb></usr/local/texlive/2021basic/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmtt12.pfb></usr/local/texlive/2021basic/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmtt8.pfb></usr/local/texlive/2021basic/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmtt9.pfb>
+Output written on preview.pdf (31 pages, 312510 bytes).
+PDF statistics:
+ 197 PDF objects out of 1000 (max. 8388607)
+ 139 compressed objects within 2 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+
