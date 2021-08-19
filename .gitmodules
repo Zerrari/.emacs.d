@@ -232,3 +232,6 @@
 [submodule "site-lisp/plugins/command-log-mode"]
 	path = site-lisp/plugins/command-log-mode
 	url = https://github.com/lewang/command-log-mode
+[submodule "site-lisp/plugins/eaf"]
+	path = site-lisp/plugins/eaf
+	url = https://github.com/emacs-eaf/emacs-application-framework.git
