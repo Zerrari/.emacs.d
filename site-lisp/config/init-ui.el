@@ -46,6 +46,10 @@
 ;; set fullscreen
 (setq initial-frame-alist (quote((fullscreen . maximized))))
 
+;; set modeline height
+;; (set-face-attribute 'mode-line nil :height 1.0)
+;; (set-face-attribute 'mode-line-inactive nil :height 0.9)
+
 ;; alpha
 ;; (set-frame-parameter (selected-frame) 'alpha '(100 . 50))
 ;; (add-to-list 'default-frame-alist '(alpha . (100 . 50)))

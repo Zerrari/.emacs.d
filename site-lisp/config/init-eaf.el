@@ -29,7 +29,7 @@
 (require 'eaf-browser)
 (require 'eaf-terminal)
 ;; (require 'eaf-mermaid)
-;; (require 'eaf-file-manager)
+(require 'eaf-file-manager)
 ;; (require 'eaf-vue-demo)
 ;; (require 'eaf-video-player)
 ;; (require 'eaf-file-sender)

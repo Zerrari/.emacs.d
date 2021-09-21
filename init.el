@@ -24,11 +24,6 @@
 
 ;;; Code:
 
-;; Test startup time
-
-;(require 'benchmark-init-loaddefs)
-;(benchmark-init/activate)
-
 (let (
 
       (gc-cons-threshold most-positive-fixnum)
@@ -49,6 +44,8 @@
     (add-to-list 'load-path zerrari-emacs-config-dir)
     (add-to-list 'load-path zerrari-emacs-plugin-dir)
 
+;(require 'benchmark-init-loaddefs)
+;(benchmark-init/activate)
     ;; (setq url-gateway-method 'socks)
 
     ;; (setq socks-server '("Default server" "127.0.0.1" 1086 5))
@@ -59,69 +56,71 @@
     (with-temp-message ""                 ;抹掉插件启动的输出
 
 	;; Make sure ENVs in Emacs same as in shell
-	;; (require 'esup)
+     ;; (require 'esup)
 
 	(require 'exec-path-from-shell)
 
 	(when (memq window-system '(mac ns x))
 	(exec-path-from-shell-initialize))
 
-	(require 'init-ui)
+      (require 'init-ui)
 
-	(require 'init-utils)
+      (require 'init-utils)
 
-	(require 'init-themes)
+      (require 'init-themes)
 
-	(require 'init-lazyload)
+      (require 'init-lazyload)
 
-	(require 'init-autosave)
+      (require 'init-autosave)
 
-	(require 'init-evil)
-	(require 'init-awesome)
+      (require 'init-evil)
+      (require 'init-awesome)
 
-	(require 'init-keymap)
+      (require 'init-keymap)
+
 	;; (require 'init-functions)
 	;; (require 'init-packages)
-
-
-	(require 'init-lsp)
 	;; (require 'init-eglot)
 
 	;; 可以延后加载的
 	(run-with-idle-timer
 	1 nil
 	#'(lambda ()
+         (require 'init-company)
+         (require 'init-swiper)
+         (require 'init-eaf)
+         (require 'init-markdown)
+         (require 'init-quickrun)
+         (require 'init-flycheck)
+         (require 'init-smartparens)
+         (require 'init-amx)
+         (require 'init-icons)
+         (require 'init-diminish)
+	    ; (require 'init-lsp)
+	    (require 'init-latex)
+
+	    ;; (require 'speed-type)
+	    ;; (require 'magit)
 	    ;; (require 'anki-editor)
-	    (require 'init-company)
 	    ;; (require 'goggles)
 	    ;; (require 'init-citre)
 	    ;; (require 'pulse)
-	    (require 'init-swiper)
 	    ;; (require 'init-snails)
 	    ;; (require 'init-whichkey)
-	    (require 'init-markdown)
-	    (require 'init-quickrun)
 	    ;; (require 'init-wakatime)
-	    (require 'init-flycheck)
-	    (require 'init-smartparens)
 
 	    ;; (require 'init-smex)
-	    ;; (require 'init-amx)
 
 	    ;; (require 'init-haskell)
 
 	    ;; (require 'init-nox)
 
-	    (require 'init-icons)
 	    ;; (require 'init-shell)
 	    ;; (require 'init-youdao)
 	    ;; (require 'telega)
 	    ;; (require 'init-arduino)
 	    ;; (require 'init-sdcv)
 	    ;; (require 'init-tools)
-	    (require 'init-diminish)
-	    ;; (require 'speed-type)
-	    ;; (require 'magit)
 	    ))))
 
 ;; (message-box (concat "Emacs loads in " (emacs-init-time)))
