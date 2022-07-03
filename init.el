@@ -30,7 +30,7 @@
       (gc-cons-percentage 0.6)
       (file-name-handler-alist nil))
 
-    (defvar zerrari-emacs-root-dir "~/.emacs.default/site-lisp")
+    (defvar zerrari-emacs-root-dir "~/.emacs.d/site-lisp")
     (defvar zerrari-emacs-config-dir (concat zerrari-emacs-root-dir "/config"))
     (defvar zerrari-emacs-plugin-dir (concat zerrari-emacs-root-dir "/plugins"))
 

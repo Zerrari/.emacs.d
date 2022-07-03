@@ -166,9 +166,6 @@
 [submodule "names"]
 	path = site-lisp/plugins/names
 	url = https://github.com/Malabarba/names
-[submodule "telega"]
-	path = site-lisp/plugins/telega
-	url = https://github.com/zevlg/telega.el/tree/releases
 [submodule "nox"]
 	path = site-lisp/plugins/nox
 	url = https://github.com/manateelazycat/nox
