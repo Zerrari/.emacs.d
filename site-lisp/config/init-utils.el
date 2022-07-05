@@ -28,7 +28,7 @@
 ;; (require 'highlight-indent-guides)
 (require 'rainbow-delimiters)
 (require 'hungry-delete)
-(require 'restart-emacs)
+;(require 'restart-emacs)
 (require 'rainbow-mode)
 ;(require 'format-all)
 
@@ -75,7 +75,7 @@
 
 (global-eldoc-mode 0)
 
-(desktop-save-mode 1)
+;;(desktop-save-mode 1)
 
 (setq make-backup-files nil)
 
@@ -83,9 +83,9 @@
 
 (setq default-directory "~/")
 
-(setq custom-file "~/.emacs.default/site-lisp/config/init-custom.el" )
+(setq custom-file "~/.emacs.d/site-lisp/config/init-custom.el" )
 
-(setq recentf-save-file "~/.emacs.default/var/recentf")
+(setq recentf-save-file "~/.emacs.d/var/recentf")
 
 ;; Vertical Scroll
 (setq scroll-step 1)
@@ -286,12 +286,12 @@ end-of-buffer signals; pass the rest to the default handler."
 
 (defun quick-open-my-config()
   (interactive)
-  (counsel-find-file "~/.emacs.default/site-lisp/config"))
+  (counsel-find-file "~/.emacs.d/site-lisp/config"))
 
-(defun save-and-restart-emacs ()
-  (interactive)
-  (quick-save-buffers)
-  (restart-emacs))
+;(defun save-and-restart-emacs ()
+  ;(interactive)
+  ;(quick-save-buffers)
+  ;(restart-emacs))
 
 (defun increase-font-size ()
   (interactive)

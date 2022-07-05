@@ -44,8 +44,8 @@
     (add-to-list 'load-path zerrari-emacs-config-dir)
     (add-to-list 'load-path zerrari-emacs-plugin-dir)
 
-;(require 'benchmark-init-loaddefs)
-;(benchmark-init/activate)
+	;; (require 'benchmark-init-loaddefs)
+	;; (benchmark-init/activate)
     ;; (setq url-gateway-method 'socks)
 
     ;; (setq socks-server '("Default server" "127.0.0.1" 1086 5))
@@ -58,10 +58,10 @@
 	;; Make sure ENVs in Emacs same as in shell
      ;; (require 'esup)
 
-	(require 'exec-path-from-shell)
+	  (require 'exec-path-from-shell)
 
-	(when (memq window-system '(mac ns x))
-	(exec-path-from-shell-initialize))
+	  (when (memq window-system '(mac ns x))
+	  	(exec-path-from-shell-initialize))
 
       (require 'init-ui)
 
@@ -88,7 +88,7 @@
 	#'(lambda ()
          (require 'init-company)
          (require 'init-swiper)
-         (require 'init-eaf)
+         ;;(require 'init-eaf)
          (require 'init-markdown)
          (require 'init-quickrun)
          (require 'init-flycheck)
@@ -96,8 +96,6 @@
          (require 'init-amx)
          (require 'init-icons)
          (require 'init-diminish)
-	    ; (require 'init-lsp)
-	    (require 'init-latex)
 
 	    ;; (require 'speed-type)
 	    ;; (require 'magit)
@@ -117,7 +115,6 @@
 
 	    ;; (require 'init-shell)
 	    ;; (require 'init-youdao)
-	    ;; (require 'telega)
 	    ;; (require 'init-arduino)
 	    ;; (require 'init-sdcv)
 	    ;; (require 'init-tools)

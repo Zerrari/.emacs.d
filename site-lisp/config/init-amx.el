@@ -28,8 +28,8 @@
 
 (amx-mode 1)
 
-(setq smex-save-file "~/.emacs.default/var/smex-items")
-(setq amx-save-file "~/.emacs.default/var/amx-items")
+(setq smex-save-file "~/.emacs.d/var/smex-items")
+(setq amx-save-file "~/.emacs.d/var/amx-items")
 
 (provide 'init-amx)
 ;;; init-amx.el ends here
