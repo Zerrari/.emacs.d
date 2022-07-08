@@ -60,7 +60,6 @@ _l_: forward       _h_: backward        _j_: next       _k_: previous
 	"f" 'hydra-files/body
 	"u" 'hydra-ui/body
 	"w" 'hydra-windows/body
-	"y" 'hydra-youdao/body
 	"SPC" 'counsel-M-x
 	"r" 'quickrun))
 
@@ -117,14 +116,14 @@ _d_: kill buffer and window    _p_: previous buffer _s_: save buffers
 				   (set-cursor-color "#40e0d0")
 				   (message "UI Mode"))
 			    :post (set-cursor-color "#ffffff")
-			 :exit t)
+			 :exit nil)
 "
 ----------------------------------------------------------------------------------
                                    UI
-_i_: increase font size    _d_: decrease font size
+_+_: increase font size    _-_: decrease font size
 "
-    ("i" increase-font-size)
-    ("d" decrease-font-size)
+    ("+" increase-font-size)
+    ("-" decrease-font-size)
     ("q" nil "quit"))
 
 (defhydra hydra-comments (:exit t
@@ -222,18 +221,6 @@ _d_: delete window  _d_: split window below
     ("o" other-window)
     ("q" nil "quit"))
 
-(defhydra hydra-youdao (:hint nil
-			 :idle 2
-			 :exit t)
-"
--------------------------------------------------------------
-                           Youdao
-_a_: search at point    _s_: search from input     _o_: posframe
-"
-    ("a" youdao-dictionary-search-at-point+)
-    ("s" youdao-dictionary-search-from-input)
-    ("o" youdao-dictionary-search-at-point-posframe)
-    ("q" nil "quit"))
 
 ;; (general-define-key
 ;;     :states 'normal

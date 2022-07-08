@@ -24,14 +24,7 @@
 
 ;;; Code:
 
-(require 'vterm)
-(add-hook 'vterm-mode-hook 'evil-emacs-state)
-
-;; (require 'shell-pop)
-
-;; (global-set-key (kbd "<f9>") 'shell-pop)
-
-;; (require 'aweshell)
+(add-hook 'eshell-mode-hook (lambda () (evil-emacs-state)))
 
 (provide 'init-shell)
 ;;; init-shell.el ends here

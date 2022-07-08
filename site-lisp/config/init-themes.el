@@ -26,7 +26,7 @@
 
 (require 'doom-themes)
 
-(load-theme 'doom-molokai t)
+(load-theme 'doom-dracula t)
 
 (provide 'init-themes)
 ;;; init-themes.el ends here

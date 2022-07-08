@@ -1,9 +1,9 @@
-;;; init-nox.el --- Nox Configuration                -*- lexical-binding: t; -*-
+;;; init-go.el --- go-mode                           -*- lexical-binding: t; -*-
 
-;; Copyright (C) 2021  zerrari
+;; Copyright (C) 2022  zerrari
 
 ;; Author: zerrari <zerrari@zhangyizhongdeMacBook-Pro.local>
-;; Keywords: lisp
+;; Keywords:
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -24,15 +24,11 @@
 
 ;;; Code:
 
-(require 'nox)
 
-(dolist (hook (list
-               'python-mode-hook
-               'c-mode-common-hook
-               'c-mode-hook
-               'c++-mode-hook
-               ))
-  (add-hook hook '(lambda () (nox-ensure))))
+(require 'go-mode)
 
-(provide 'init-nox)
-;;; init-nox.el ends here
+(autoload 'go-mode "go-mode" nil t)
+(add-to-list 'auto-mode-alist '("\\.go\\'" . go-mode))
+
+(provide 'init-go)
+;;; init-go.el ends here

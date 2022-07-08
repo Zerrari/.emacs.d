@@ -32,7 +32,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
-   '("0466adb5554ea3055d0353d363832446cd8be7b799c39839f387abb631ea0995" "cf922a7a5c514fad79c483048257c5d8f242b21987af0db813d3f0b138dfaf53" "a1917d891d4a4368d1957db07644265ed1dc4d9f570b0a7cbb7da76fff610985" default)))
+   '("b7e460a67bcb6cac0a6aadfdc99bdf8bbfca1393da535d4e8945df0648fa95fb" default)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
